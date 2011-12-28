@@ -1,0 +1,71 @@
+/**
+ * Responsive Base
+ *
+ * Drop this in your stylesheet after your reset but before your
+ * main styles to provide a solid responsive base to work from.
+ *
+ * @link github.com/ryanve/css3base
+ */
+
+/* =========================================================== 
+   Responsive embedded elems.
+   Consider adding !important to override inline styles. 
+   ========================================================*/
+audio, canvas, img, math, svg, video {
+  max-width: 100%;
+	height: auto;
+}
+
+/* Avoid auto height on these due to vertical clipping. */
+embed, iframe, object {
+	max-width: 100%;
+}
+
+/* ===========================================================
+    Responsive tables. Drop table displays in small viewports.
+	css-tricks.com/responsive-data-tables/
+	========================================================*/
+@media screen and (max-width: 640px) {
+	table, thead, tbody, th, td, tr {
+		display: block;
+	}
+}
+
+/* ===========================================================
+   Text/spacing @ golden ratio. Header sizes bumped up @ 320+
+   ========================================================*/
+h1 {
+	font-size: 200%;
+	margin: .36em 0;
+}
+
+article header>h1, h2, h3 {
+	font-size: 138%;
+}
+
+h5, h6 {
+	font-size: 80%;
+}
+
+p, h5, h6, ul, ol, dl {
+	margin: 1em 0;
+}
+
+p, ul, ol, dl {
+	line-height: 1.6;
+}
+
+dd+dt {
+	margin-top: 1em;
+}
+
+/* no space between consecutive headers */
+h1+h2, h2+h3, h3+h4, h4+h5, h5+h6, hgroup h1 {
+	margin: 0;
+}
+
+/* Increase sizes proportionately for 320+ */
+@media screen and (min-width: 320px) {
+	h1 { font-size: 262%; }
+	article header>h1, h2 { font-size: 162%; }
+}

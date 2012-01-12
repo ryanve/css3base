@@ -9,11 +9,11 @@
 
 /* =========================================================== 
    Responsive embedded elems.
-   Consider adding !important to override inline styles. 
    ========================================================*/
 audio, canvas, img, math, svg, video {
-  max-width: 100%;
-	height: auto;
+  width: inherit;  /* This makes the next two lines work in IE8. */
+  max-width: 100%; /* Add !important if needed. */
+  height: auto;    /* Add !important if needed. */
 }
 
 /* Avoid auto height on these due to vertical clipping. */
@@ -24,7 +24,7 @@ embed, iframe, object {
 /* ===========================================================
     Responsive tables. Drop table displays in small viewports.
 	css-tricks.com/responsive-data-tables/
-	========================================================*/
+   ========================================================*/
 @media screen and (max-width: 640px) {
 	table, thead, tbody, th, td, tr {
 		display: block;
@@ -52,7 +52,7 @@ p, h5, h6, ul, ol, dl {
 }
 
 p, ul, ol, dl {
-	line-height: 1.6;
+	line-height: 1.4;
 }
 
 dd+dt {

@@ -21,6 +21,9 @@ embed, iframe, object {
 	max-width: 100%;
 }
 
+/* Allow code to wrap better..*/
+code{word-wrap:break-word}
+
 /* ===========================================================
     Responsive tables. Drop table displays in small viewports.
 	css-tricks.com/responsive-data-tables/

@@ -1,74 +1,82 @@
 /**
- * Responsive Base
- *
- * Drop this in your stylesheet after your reset but before your
- * main styles to provide a solid responsive base to work from.
- *
- * @link github.com/ryanve/css3base
+ * Responsive Base | 2012-03-16 | Place this after normalize and
+ * before your primary styles to provide a solid responsive base.
+ * @link     github.com/ryanve/css3base
+ * @license  public domain
  */
 
-/* =========================================================== 
-   Responsive embedded elems.
-   ========================================================*/
-audio, canvas, img, math, svg, video {
-  width: inherit;  /* This makes the next two lines work in IE8. */
-  max-width: 100%; /* Add !important if needed. */
-  height: auto;    /* Add !important if needed. */
+/* Prevent horizontal scrollbar. */ 
+html{overflow-x:hidden}
+
+/* Setup body for centering. This works really well in combination
+   w/ setting its width in % and a max-width in px, for example:
+   body{margin:0 auto; padding:0 3%; width:94%; max-width:960px} */
+body{margin:0 auto}
+ 
+/* =========================================================
+   Responsive Embedded Media
+   Use !important as needed to override inline styles.
+   ========================================================= */
+
+audio,canvas,img,math,svg,video {
+	width: inherit;   /* Makes the next 2 lines work in IE8. */
+	max-width: 100%;  /* Add !important here if needed. */
+	height: auto;	  /* Add !important here if needed. */
 }
 
 /* Avoid auto height on these due to vertical clipping. */
-embed, iframe, object {
-	max-width: 100%;
-}
+embed,iframe,object{max-width:100%}
 
-/* Allow code to wrap better..*/
+/* Allow code to wrap better. */
 code{word-wrap:break-word}
 
-/* ===========================================================
-    Responsive tables. Drop table displays in small viewports.
-	css-tricks.com/responsive-data-tables/
-   ========================================================*/
-@media screen and (max-width: 640px) {
-	table, thead, tbody, th, td, tr {
-		display: block;
-	}
+/* =========================================================
+   Responsive Text and Spacing
+   Sizes are based on the fibonacci series and bumped up 
+   proportionately using media queries.
+   ========================================================= */
+
+h1{font-size:162%;margin:.38em 0}
+h2{font-size:138%;margin:.5em 0}
+h3{font-size:120%;margin:.612em 0}
+h4{font-size:100%;margin:1em 0}
+h5{font-size:85%;margin:1.2em 0}
+h6{font-size:85%;margin:1.38em 0}
+dl,ul,ol,p{line-height:1.4}
+dl,ul,ol,p{margin:1em 0}
+dd+dt{margin-top:1em}
+
+/* No margins between hgrouped headers. Include h1+h2,h2+h3,h3+h4,h4+h5,h5+h6
+   here if you want to zero the margins between other consecutive headers too. */
+hgroup h1,hgroup h2,hgroup h3,hgroup h4,hgroup h5,hgroup h6{margin:0}
+
+/* Bump up header sizes proportionately */
+@media all and (min-width:481px) {
+	h1{font-size:262%}
+	h2{font-size:162%}
+	h3{font-size:138%}
+	h4{font-size:120%}
+	h5{font-size:100%}
+	h6{font-size:85%}
 }
 
-/* ===========================================================
-   Text/spacing @ golden ratio. Header sizes bumped up @ 320+
-   ========================================================*/
-h1 {
-	font-size: 200%;
-	margin: .36em 0;
-}
+/* Consider bumping up further by multiplying the h1 size 
+   by 1.62 and shifting the rest up. For example:  */
+/*@media all and (min-width:961px) {
+	h1{font-size:362%}
+	h2{font-size:262%}
+	h3{font-size:200%}
+	h4{font-size:162%}
+	h5{font-size:120%}
+	h6{font-size:100%}
+}*/
 
-article header>h1, h2, h3 {
-	font-size: 138%;
-}
+/* ========================================================
+   Responsive Tables - Drop tables in small viewports.
+   @link css-tricks.com/responsive-data-tables/
+   ======================================================== */
 
-h5, h6 {
-	font-size: 80%;
-}
-
-p, h5, h6, ul, ol, dl {
-	margin: 1em 0;
-}
-
-p, ul, ol, dl {
-	line-height: 1.4;
-}
-
-dd+dt {
-	margin-top: 1em;
-}
-
-/* no space between consecutive headers */
-h1+h2, h2+h3, h3+h4, h4+h5, h5+h6, hgroup h1 {
-	margin: 0;
-}
-
-/* Increase sizes proportionately for 320+ */
-@media screen and (min-width: 320px) {
-	h1 { font-size: 262%; }
-	article header>h1, h2 { font-size: 162%; }
+@media all and (max-width:320px) {
+	table,thead,tbody,th,td,tr{display:block}
+	tr+tr{margin-top:1em}
 }

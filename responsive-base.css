@@ -48,7 +48,7 @@ dd+dt{margin-top:1em}
 
 /* No margins between hgrouped headers. Include h1+h2,h2+h3,h3+h4,h4+h5,h5+h6
    here if you want to zero the margins between other consecutive headers too. */
-hgroup h1,hgroup h2,hgroup h3,hgroup h4,hgroup h5,hgroup h6{margin:0}
+hgroup>*{margin:0}
 
 /* Bump up header sizes proportionately */
 @media all and (min-width:481px) {

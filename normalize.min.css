@@ -1,7 +1,8 @@
 /**
- * HTML5 Boilerplate | H5BP.com | minified | 2012-03-15
- * See original @link github.com/h5bp/html5-boilerplate
- * ==|== normalize ====================================
+ * H5BP.com Normalize | minified | 2012-03-15
+ * Via @link github.com/h5bp/html5-boilerplate
+ * and @link github.com/necolas/normalize.css
+ * @license public domain ====================
  */
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}[hidden],audio:not([controls]){display:none}
 html{font-size:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html,button,input,select,textarea{font-family:sans-serif;color:#222}body{margin:0;font-size:1em;line-height:1.4}

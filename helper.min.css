@@ -1,0 +1,13 @@
+/**
+ * H5BP.com = helper classes == 2012-03-16
+ * @link github.com/h5bp/html5-boilerplate
+ * @link github.com/ryanve/css3base
+ * @license public domain ================
+ */
+.ir{border:0;font:0/0 a;text-shadow:none;color:transparent;background-color:transparent}/*image replace*/
+.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
+.hidden{display:none!important;visibility:hidden}/* hide from screenreaders and browsers */
+.invisible{visibility:hidden}/* hide visually and from screenreaders but maintain layout */
+ /* hide only visually but have it available for screenreaders h5bp.com/v and h5bp.com/p */
+.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
+.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}

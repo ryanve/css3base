@@ -6,9 +6,10 @@
  */
 
 <!--#include file="normalize.min.css" -->
-<!--#include file="responsive.min.css" -->
+<!--#include file="responsive-base.min.css" -->
 <!--#include file="solarized.min.css" -->
 
   /* add primary styles here */
 
+<!--#include file="helper.min.css" -->
 <!--#include file="print.css" -->

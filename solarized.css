@@ -1,5 +1,5 @@
 /**
- * CSS for implementing Solarized colors | 2012-03-16
+ * CSS for implementing Solarized colors | 2012-03-17
  * @link  ethanschoonover.com/solarized (MIT License)
  * @link  github.com/ryanve/css3base    (CC0 License)
  * @example <div class="solarized"> for light background
@@ -11,8 +11,8 @@
 .solarized.dark {color:#657b83;background:#002b36} /* base00/base03 */ 
 
 /* Emphasized/un-emphasized text (base1/base01) =================== */
-.solarized small, .solarized.dark em {color:#93a1a1} /* base1  */  
-.solarized em, .solarized.dark small {color:#586e75} /* base01 */  
+.solarized small, .solarized.dark em, .solarized.dark strong {color:#93a1a1} /* base1  */  
+.solarized em, .solarized strong, .solarized.dark small {color:#586e75} /* base01 */  
 .solarized pre em, .solarized code em{font-style:normal}
 .solarized pre small, .solarized code small{font-size:100%}/* no inherit in IE7- */
 .solarized small, .solarized.dark small {font-size:inherit}

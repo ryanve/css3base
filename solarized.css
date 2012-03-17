@@ -1,0 +1,38 @@
+/**
+ * CSS for implementing Solarized colors | 2012-03-16
+ * @link  ethanschoonover.com/solarized (MIT License)
+ * @link  github.com/ryanve/css3base  (public domain)
+ * @example <div class="solarized"> for light background
+ * @example <div class="solarized dark"> for dark background
+ */
+
+/* Default Colors ================================================= */
+.solarized      {color:#839496;background:#fdf6e3}   /* base0 /base3  */
+.solarized.dark {color:#657b83;background:#002b36} /* base00/base03 */ 
+
+/* Emphasized/un-emphasized text (base1/base01) =================== */
+.solarized small, .solarized.dark em {color:#93a1a1} /* base1  */  
+.solarized em, .solarized.dark small {color:#586e75} /* base01 */  
+.solarized pre em, .solarized code em{font-style:normal}
+.solarized pre small, .solarized code small{font-size:100%}/* no inherit in IE7- */
+.solarized small, .solarized.dark small {font-size:inherit}
+
+/* Background Highlights (base2/base02) =========================== */
+.solarized mark {color:#657b83}/* base00 for IE7- */
+.solarized mark {background:#eee8d5;color:inherit} /* base2  */
+.solarized.dark mark {background:#073642}          /* base02 */
+.solarized pre mark, .solarized code mark{font-style:normal}
+
+/* Default Link Colors ============================================ */
+.solarized a       {color:#268bd2} /* blue    */
+.solarized a:hover {color:#d33682} /* magenta */
+
+/* Accent Colors (same for light and dark) ======================== */
+.solarized .yellow  {color:#b58900} /* approx #b80 */
+.solarized .orange  {color:#cb4b16} /* approx #c41 */
+.solarized .red     {color:#dc322f} /* approx #d32 */
+.solarized .magenta {color:#d33682} /* approx #d38 */
+.solarized .violet  {color:#6c71c4} /* approx #67c */
+.solarized .blue    {color:#268bd2} /* approx #28d */
+.solarized .cyan    {color:#2aa198} /* approx #2a9 */
+.solarized .green   {color:#859900} /* approx #890 */

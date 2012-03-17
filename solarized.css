@@ -28,11 +28,11 @@
 .solarized a:hover {color:#d33682} /* magenta */
 
 /* Accent Colors (same for light and dark) ======================== */
-.solarized .yellow  {color:#b58900} /* approx #b80 */
-.solarized .orange  {color:#cb4b16} /* approx #c41 */
-.solarized .red     {color:#dc322f} /* approx #d32 */
-.solarized .magenta {color:#d33682} /* approx #d38 */
-.solarized .violet  {color:#6c71c4} /* approx #67c */
-.solarized .blue    {color:#268bd2} /* approx #28d */
-.solarized .cyan    {color:#2aa198} /* approx #2a9 */
-.solarized .green   {color:#859900} /* approx #890 */
+.solarized .yellow  {color:#b58900 !important} /* approx #b80 */
+.solarized .orange  {color:#cb4b16 !important} /* approx #c41 */
+.solarized .red     {color:#dc322f !important} /* approx #d32 */
+.solarized .magenta {color:#d33682 !important} /* approx #d38 */
+.solarized .violet  {color:#6c71c4 !important} /* approx #67c */
+.solarized .blue    {color:#268bd2 !important} /* approx #28d */
+.solarized .cyan    {color:#2aa198 !important} /* approx #2a9 */
+.solarized .green   {color:#859900 !important} /* approx #890 */

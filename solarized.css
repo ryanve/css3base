@@ -18,8 +18,8 @@
 /* Emphasized/un-emphasized Colors (base1/base01) ================= */
 .solarized small, .solarized.dark em, .solarized.dark strong {color:#93a1a1} /* base1  */  
 .solarized em, .solarized strong, .solarized.dark small {color:#586e75} /* base01 */  
-.solarized pre small, pre.solarized small, .solarized code small {font-size:100%}/* no inherit in IE7- */
-.solarized pre small, pre.solarized small, .solarized code small {font-size:inherit}
+/* IE7- does not support inherit so use IE6/7 star hack for 100% instead  */
+.solarized pre small, pre.solarized small, .solarized code small {font-size:inherit;*font-size:100%}
 
 /* Background Highlights (base2/base02) =========================== */
 .solarized mark {color:#657b83}/* base00 for IE7- */

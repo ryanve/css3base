@@ -77,6 +77,6 @@ hgroup>*{margin:0}
    ======================================================== */
 
 @media all and (max-width:320px) {
-	table,thead,tbody,th,td,tr{display:block}
+	table,thead,tbody,tfoot,th,td,tr{display:block}
 	tr+tr{margin-top:1em}
 }

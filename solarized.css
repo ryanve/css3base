@@ -11,9 +11,9 @@
 .solarized.dark {color:#657b83;background:#002b36} /* base00/base03 */ 
 
 /* No italics for these. ========================================== */
-.solarized pre em, pre.solarized em, .solarized code em, 
-.solarized pre var, pre.solarized var, .solarized code var,
-.solarized pre mark, pre.solarized mark, .solarized code mark {font-style:normal}
+.solarized pre em, .pre em, pre.solarized em, .solarized code em, 
+.solarized pre var, .pre var, pre.solarized var, .solarized code var, 
+.solarized pre mark, .pre mark, pre.solarized mark, .solarized code mark {font-style:normal}
 
 /* Emphasized/un-emphasized Colors (base1/base01) ================= */
 .solarized small, .solarized.dark em, .solarized.dark strong {color:#93a1a1} /* base1  */  
@@ -39,3 +39,7 @@
 .solarized .blue    {color:#268bd2 !important} /* approx #28d */
 .solarized .cyan    {color:#2aa198 !important} /* approx #2a9 */
 .solarized .green   {color:#859900 !important} /* approx #890 */
+
+/* .pre helper class applies same styles as pre in normalize.css = */
+.pre {font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
+.pre {white-space:pre;white-space:pre-wrap;word-wrap:break-word}

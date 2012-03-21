@@ -6,12 +6,12 @@
  * @example <div class="solarized dark"> for dark background
  */
 
-/* Normalize Code (from normalize.css) plus a .pre helper class = */
+/* Normalize Code (from normalize.css) plus a .pre helper class == */
 .pre,pre,code,kbd,samp {font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}
 .pre,pre {white-space:pre;white-space:pre-wrap;word-wrap:break-word}
 
 /* Default Colors ================================================= */
-.solarized      {color:#839496;background:#fdf6e3}   /* base0 /base3  */
+.solarized      {color:#839496;background:#fdf6e3} /* base0 /base3  */
 .solarized.dark {color:#657b83;background:#002b36} /* base00/base03 */ 
 
 /* No italics for these. ========================================== */
@@ -23,7 +23,7 @@
 .solarized small, .solarized.dark em, .solarized.dark strong {color:#93a1a1} /* base1  */  
 .solarized em, .solarized strong, .solarized.dark small {color:#586e75} /* base01 */  
 /* IE7- does not support inherit so use IE6/7 star hack for 100% instead  */
-.solarized pre small, pre.solarized small, .solarized code small {font-size:inherit;*font-size:100%}
+.solarized pre small, .pre small, pre.solarized small, .solarized code small {font-size:inherit;*font-size:100%}
 
 /* Background Highlights (base2/base02) =========================== */
 .solarized mark {color:#657b83}/* base00 for IE7- */

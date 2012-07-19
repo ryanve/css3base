@@ -1,10 +1,10 @@
 /**
- * Responsive Base | 2012-03-16 | Place this after normalize and
+ * Responsive Base | 2012-07-18 | Place this after normalize and
  * before your primary styles to provide a solid responsive base.
  * @link     github.com/ryanve/css3base
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
-html{overflow-x:hidden}body{margin:0 auto}code{word-wrap:break-word}audio,canvas,img,math,svg,video {width: inherit;max-width: 100%;height: auto}embed,iframe,object{max-width:100%}
+html{overflow-x:hidden}body{margin:0 auto}code{word-wrap:break-word}audio,canvas,img,math,svg,video{width:inherit;max-width:100%;height:auto}embed,iframe,object,input,textarea,progress,meter,datalist,output{max-width:100%}
 h1{font-size:162%;margin:.38em 0}h2{font-size:138%;margin:.5em 0}h3{font-size:120%;margin:.612em 0}h4{font-size:100%;margin:1em 0}h5{font-size:85%;margin:1.2em 0}h6{font-size:85%;margin:1.38em 0}dl,ul,ol,p{line-height:1.4}dl,ul,ol,p{margin:1em 0}dd+dt{margin-top:1em}hgroup h1,hgroup h2,hgroup h3,hgroup h4,hgroup h5,hgroup h6{margin:0}
 @media all and (min-width:481px){h1{font-size:262%}h2{font-size:162%}h3{font-size:138%}h4{font-size:120%}h5{font-size:100%}h6{font-size:85%}}
 @media all and (max-width:320px){table,thead,tbody,th,td,tr{display:block}tr+tr{margin-top:1em}}

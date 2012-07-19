@@ -1,5 +1,5 @@
 /**
- * Responsive Base | 2012-03-16 | Place this after normalize and
+ * Responsive Base | 2012-07-18 | Place this after normalize and
  * before your primary styles to provide a solid responsive base.
  * @link     github.com/ryanve/css3base
  * @license  creativecommons.org/publicdomain/zero/1.0/
@@ -24,8 +24,8 @@ audio,canvas,img,math,svg,video {
 	height: auto;	  /* Add !important here if needed. */
 }
 
-/* Avoid auto height on these due to vertical clipping. */
-embed,iframe,object{max-width:100%}
+/* Don't use height:auto on embed|iframe|object due to vertical clipping. */
+embed,iframe,object,input,textarea,progress,meter,datalist,output{max-width:100%}
 
 /* Allow code to wrap better. */
 code{word-wrap:break-word}

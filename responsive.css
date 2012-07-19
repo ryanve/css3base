@@ -1,5 +1,9 @@
 /**
+<<<<<<< HEAD
  * Responsive Base | 2012-07-18 | Place this after normalize and
+=======
+ * Responsive Base | 2012-03-19 | Place this after normalize and
+>>>>>>> 44d201ba33fe0659037e621baad44031aa17dc15
  * before your primary styles to provide a solid responsive base.
  * @link     github.com/ryanve/css3base
  * @license  creativecommons.org/publicdomain/zero/1.0/
@@ -77,6 +81,6 @@ hgroup>*{margin:0}
    ======================================================== */
 
 @media all and (max-width:320px) {
-	table,thead,tbody,th,td,tr{display:block}
+	table,thead,tbody,tfoot,th,td,tr{display:block}
 	tr+tr{margin-top:1em}
 }

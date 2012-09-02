@@ -1,34 +1,55 @@
-/**
- * Responsive Base | 2012-07-18 | Place this after normalize and
- * before your primary styles to provide a solid responsive base.
- * @link     github.com/ryanve/css3base
+/*!
+ * responsive.css | base responsive styles by @ryanve
+ * @version  2012-09-01
+ * @link     github.com/ryanve/css3base 
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
 
 /* Prevent horizontal scrollbar. */ 
-html{overflow-x:hidden}
+html { overflow-x:hidden }
 
 /* Setup body for centering. This works really well in combination
    w/ setting its width in % and a max-width in px, for example:
    body{margin:0 auto; padding:0 3%; width:94%; max-width:960px} */
-body{margin:0 auto}
+body { margin:0 auto }
+
+/* Allow code to wrap better. */
+code { word-wrap:break-word }
  
 /* =========================================================
-   Responsive Embedded Media
+   Responsive Embedded Media and Form Elements.
    Use !important as needed to override inline styles.
    ========================================================= */
 
-audio,canvas,img,math,svg,video {
-	width: inherit;   /* Makes the next 2 lines work in IE8. */
-	max-width: 100%;  /* Add !important here if needed. */
-	height: auto;	  /* Add !important here if needed. */
-}
+/*
+ * Don't use `height:auto` on embed|iframe|object due to vertical clipping.
+ * Using `width:inherit` on img's is safe. Using it on other media elems may hide them.
+ * Add !important to the `max-width` and `height` directives as needed. (See .rwd-force) 
+ */
+img,audio,canvas,math,svg,video,embed,iframe,object,input,textarea,progress,meter,datalist,output { max-width:100% }
+img,audio,canvas,math,svg,video { height: auto }
+img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
 
-/* Don't use height:auto on embed|iframe|object due to vertical clipping. */
-embed,iframe,object,input,textarea,progress,meter,datalist,output{max-width:100%}
+/* 
+ * Force override inline styles via: <body class="rwd-force">
+ * The is useful with CMSs like WordPress that add inline styles. 
+ */
+.rwd-force img, img.rwd-force { max-width: 100% !important; height: auto !important }
 
-/* Allow code to wrap better. */
-code{word-wrap:break-word}
+/* 
+ * Videohelper classes based on magic by @beep
+ * example usage:
+   <div class="rwd-wrap-4:3">
+       <iframe width="640" height="480" ...></iframe>
+   </div>
+   <div class="rwd-wrap-16:9">
+       <iframe width="1280" height="720" ...></iframe>
+   </div>
+ */
+.rwd-wrap-16\:9,.rwd-wrap-4\:3 { position: relative }
+.rwd-wrap-16\:9    { padding-top: 56.25% }
+.rwd-wrap-4\:3      { padding-top: 75% }
+.rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
 
 /* =========================================================
    Responsive Text and Spacing
@@ -36,15 +57,15 @@ code{word-wrap:break-word}
    proportionately using media queries.
    ========================================================= */
 
-h1{font-size:162%;margin:.38em 0}
-h2{font-size:138%;margin:.5em 0}
-h3{font-size:120%;margin:.612em 0}
-h4{font-size:100%;margin:1em 0}
-h5{font-size:85%;margin:1.2em 0}
-h6{font-size:85%;margin:1.38em 0}
-dl,ul,ol,p{line-height:1.4}
-dl,ul,ol,p{margin:1em 0}
-dd+dt{margin-top:1em}
+h1 { font-size:162%; margin:.38em 0 }
+h2 { font-size:138%; margin:.5em 0 }
+h3 { font-size:120%; margin:.612em 0 }
+h4 { font-size:100%; margin:1em 0 }
+h5 { font-size:85%; margin:1.2em 0 }
+h6 { font-size:85%; margin:1.38em 0 }
+dl,ul,ol,p { line-height: 1.4 }
+dl,ul,ol,p { margin: 1em 0 }
+dd+dt { margin-top: 1em }
 
 /* No margins between hgrouped headers. Include h1+h2,h2+h3,h3+h4,h4+h5,h5+h6
    here if you want to zero the margins between other consecutive headers too. */
@@ -52,23 +73,23 @@ hgroup>*{margin:0}
 
 /* Bump up header sizes proportionately */
 @media all and (min-width:481px) {
-	h1{font-size:262%}
-	h2{font-size:162%}
-	h3{font-size:138%}
-	h4{font-size:120%}
-	h5{font-size:100%}
-	h6{font-size:85%}
+    h1{ font-size: 262% }
+    h2{ font-size: 162% }
+    h3{ font-size: 138% }
+    h4{ font-size: 120% }
+    h5{ font-size: 100% }
+    h6{ font-size: 85% }
 }
 
 /* Consider bumping up further by multiplying the h1 size 
    by 1.62 and shifting the rest up. For example:  */
 /*@media all and (min-width:961px) {
-	h1{font-size:362%}
-	h2{font-size:262%}
-	h3{font-size:200%}
-	h4{font-size:162%}
-	h5{font-size:120%}
-	h6{font-size:100%}
+    h1{font-size:362%}
+    h2{font-size:262%}
+    h3{font-size:200%}
+    h4{font-size:162%}
+    h5{font-size:120%}
+    h6{font-size:100%}
 }*/
 
 /* ========================================================
@@ -77,6 +98,6 @@ hgroup>*{margin:0}
    ======================================================== */
 
 @media all and (max-width:320px) {
-	table,thead,tbody,tfoot,th,td,tr{display:block}
-	tr+tr{margin-top:1em}
+    table,thead,tbody,tfoot,th,td,tr { display: block }
+    tr+tr { margin-top: 1em }
 }

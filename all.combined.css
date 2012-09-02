@@ -1,14 +1,35 @@
-/**
- * Concatenate using SSI includes (See setup in H5BP htaccess)
- * @link github.com/h5bp/html5-boilerplate
- * @link httpd.apache.org/docs/2.0/howto/ssi.html
- * @link github.com/ryanve/css3base
+/*!
+ * @link  css3base.com
+ * @link  css3base.com/css/ 
+ * combined via SSI includes (as seen in htaccess @link h5bp.com)
+ * @link  bit.ly/apache-ssi
  */
 
-<!--#include file="normalize.min.css" -->
+/* ==start=> normalize.css */
+<!--#include file="normalize.css" -->
+/* <==end=== normalize.css */
+
+/* ==start=> h5bp.css */
+<!--#include file="h5bp.css" -->
+/* <==end=== h5bp.css */
+
+/* ==start=> responsive.css */
 <!--#include file="responsive.min.css" -->
+/* <==end=== responsive.css */
+
+/* ==start=> solarized.css */
 <!--#include file="solarized.min.css" -->
+/* <==end=== solarized.css */
 
-  /* add primary styles here */
+/* ==start=> custom.css */
+<!--#include file="custom.css" -->
+/* <==end=== custom.css */
 
-<!--#include file="overrides.min.css" -->
+/* ==start=> helper.css */
+<!--#include file="helper.css" -->
+/* <==end=== helper.css */
+
+/* ==start=> print.css */
+<!--#include file="print.css" -->
+/* <==end=== print.css */
+

@@ -1,7 +1,7 @@
 /*!
  * responsive.css | base responsive styles by @ryanve
- * @version  2012-09-01
- * @link     github.com/ryanve/css3base 
+ * @version  2012-09-15
+ * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
 
@@ -50,47 +50,6 @@ img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
 .rwd-wrap-16\:9    { padding-top: 56.25% }
 .rwd-wrap-4\:3      { padding-top: 75% }
 .rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
-
-/* =========================================================
-   Responsive Text and Spacing
-   Sizes are based on the fibonacci series and bumped up 
-   proportionately using media queries.
-   ========================================================= */
-
-h1 { font-size:162%; margin:.38em 0 }
-h2 { font-size:138%; margin:.5em 0 }
-h3 { font-size:120%; margin:.612em 0 }
-h4 { font-size:100%; margin:1em 0 }
-h5 { font-size:85%; margin:1.2em 0 }
-h6 { font-size:85%; margin:1.38em 0 }
-dl,ul,ol,p { line-height: 1.4 }
-dl,ul,ol,p { margin: 1em 0 }
-dd+dt { margin-top: 1em }
-
-/* No margins between hgrouped headers. Include h1+h2,h2+h3,h3+h4,h4+h5,h5+h6
-   here if you want to zero the margins between other consecutive headers too. */
-hgroup>*{margin:0}
-
-/* Bump up header sizes proportionately */
-@media all and (min-width:481px) {
-    h1{ font-size: 262% }
-    h2{ font-size: 162% }
-    h3{ font-size: 138% }
-    h4{ font-size: 120% }
-    h5{ font-size: 100% }
-    h6{ font-size: 85% }
-}
-
-/* Consider bumping up further by multiplying the h1 size 
-   by 1.62 and shifting the rest up. For example:  */
-/*@media all and (min-width:961px) {
-    h1{font-size:362%}
-    h2{font-size:262%}
-    h3{font-size:200%}
-    h4{font-size:162%}
-    h5{font-size:120%}
-    h6{font-size:100%}
-}*/
 
 /* ========================================================
    Responsive Tables - Drop tables in small viewports.

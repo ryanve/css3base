@@ -47,7 +47,7 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
 .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.056em }
 .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.090em }
 
-@media all and (min-width:320px) {
+@media all and (min-width:20em) {
     .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.056em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.090em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.171em }
@@ -56,7 +56,7 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
 
 /* bump up sizes proportionately */
 
-@media all and (min-width:481px) {
+@media all and (min-width:30em) {
     .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.090em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.171em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.309em }
@@ -69,7 +69,7 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .lead { font-size:1.146em }
 }
 
-@media all and (min-width:641px) {
+@media all and (min-width:40em) {
     .\+\+ h1,.\+\+\+ h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2.618em }
     .\+\+ h2,.\+\+\+ h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 2em }
     .\+\+ h3,.\+\+\+ h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.618em }
@@ -77,11 +77,11 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .lead { font-size:1.236em }
 }
 
-@media all and (min-width:961px) {
+@media all and (min-width:50em) {
     .lead { font-size:1.309em }
 }
 
-@media all and (min-width:961px) {
+@media all and (min-width:60em) {
     .\+\+\+ h1,.\+\+\+ .h1 { font-size:3.236em }
     .\+\+\+ h2,.\+\+\+ .h2 { font-size:2.618em }
     .\+\+\+ h3,.\+\+\+ .h3 { font-size:2em }
@@ -91,7 +91,7 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .lead { font-size:1.382em }    
 }
 
-@media all and (min-width:1121px) {
+@media all and (min-width:70em) {
     .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.171em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.309em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.412em }

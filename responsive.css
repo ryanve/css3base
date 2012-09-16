@@ -1,6 +1,6 @@
 /*!
  * responsive.css | base responsive styles by @ryanve
- * @version  2012-09-15
+ * @version  2012-09-16
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -56,7 +56,7 @@ img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
    @link css-tricks.com/responsive-data-tables/
    ======================================================== */
 
-@media all and (max-width:320px) {
+@media all and (max-width:20em) {
     table,thead,tbody,tfoot,th,td,tr { display: block }
     tr+tr { margin-top: 1em }
 }

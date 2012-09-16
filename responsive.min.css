@@ -1,6 +1,6 @@
 /*!
  * responsive.css | base responsive styles by @ryanve
- * @version  2012-09-01
+ * @version  2012-09-16
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -11,7 +11,4 @@ img,audio,canvas,math,svg,video{height:auto}img{width:inherit}
 .rwd-wrap-16\:9,.rwd-wrap-4\:3{position:relative}
 .rwd-wrap-16\:9{padding-top:56.25%}.rwd-wrap-4\:3{padding-top:75%}
 .rwd-wrap-16\:9>*,.rwd-wrap-4\:3>*{position:absolute;left:0;top:0;height:100%}
-h1{font-size:162%;margin:.38em 0}h2{font-size:138%;margin:.5em 0}h3{font-size:120%;margin:.612em 0}h4{font-size:100%;margin:1em 0}h5{font-size:85%;margin:1.2em 0}h6{font-size:85%;margin:1.38em 0}
-dl,ul,ol,p{line-height:1.4}dl,ul,ol,p{margin:1em 0}dd+dt{margin-top:1em}hgroup>*{margin:0}
-@media all and (min-width:481px){h1{font-size:262%}h2{font-size:162%}h3{font-size:138%}h4{font-size:120%}h5{font-size:100%}h6{font-size:85%}}
-@media all and (max-width:320px){table,thead,tbody,tfoot,th,td,tr{display:block}tr+tr{margin-top:1em}}
+@media all and (max-width:20em){table,thead,tbody,tfoot,th,td,tr{display:block}tr+tr{margin-top:1em}}

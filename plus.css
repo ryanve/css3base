@@ -1,6 +1,6 @@
 /*!
  * plus.css | mobile-first Fibonacci text by @ryanve
- * @version  2012-09-16
+ * @version  2012-09-18
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -9,16 +9,16 @@
     spacing
     ========================================================  */
 
+body { line-height:1.382 }
 h1,.h1 { margin:.382em 0 }
-h2,.h1 { margin:.500em 0 }
-h3,.h1 { margin:.618em 0 }
-h4,.h1 { margin:.854em 0 }
-h5,.h1 { margin:1em 0 }
-h6,.h1 { margin:1em 0 }
-dl,ul,ol,p { line-height: 1.382 }
-dl,ul,ol,p { margin: 1em 0 }
-dd+dt { margin-top: 1em }
+h2,.h2 { margin:.500em 0 }
+h3,.h3 { margin:.618em 0 }
+h4,.h4 { margin:.854em 0 }
+h5,.h5 { margin:1em 0 }
+h6,.h6 { margin:1em 0 }
 hgroup>*{margin:0} /* hgrouped headers */
+dl,ul,ol,p,blockquote { margin-top: 1.171em; margin-bottom: 1.171em } /* =1.618/line-height */
+dd+dt { margin-top:1em }
 
 /*  ========================================================
     sizing:
@@ -27,8 +27,7 @@ hgroup>*{margin:0} /* hgrouped headers */
         <html class="+++">
     ========================================================  */
 
-body { font:normal 1em sans-serif }
-
+body { font-size: 1em }
 h1,.\+ h1,.\+ .h1 { font-size:1.618em }
 h2,.\+ h2,.\+ .h2 { font-size:1.382em }
 h3,.\+ h3,.\+ .h3 { font-size:1.236em }

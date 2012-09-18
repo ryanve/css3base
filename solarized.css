@@ -42,7 +42,7 @@
 .solarized.dark mark ::-moz-selection { background:#002b36 } /* base03 */
 
 /* Link Colors ============================================================ */
-.solarized a            { color:#268bd2 }
+.solarized a { color:#268bd2 }
 .solarized a:hover { color:#cb4b16 }
 
 /* Accent Colors (same for light and dark) ================================ */

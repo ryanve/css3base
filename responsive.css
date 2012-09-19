@@ -1,43 +1,54 @@
 /*!
  * responsive.css | base responsive styles by @ryanve
- * @version  2012-09-16
+ * @version  2012-09-18
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
 
-/* Prevent horizontal scrollbar. */ 
+/* Prevent horizontal scrollbar. If all the other styles 
+   on the page are set in percentages you don't need this, 
+   but it acts as a nice catch. */ 
 html { overflow-x:hidden }
 
-/* Setup body for centering. This works really well in combination
-   w/ setting its width in % and a max-width in px, for example:
-   body{margin:0 auto; padding:0 3%; width:94%; max-width:960px} */
-body { margin:0 auto }
+/* Setup body for fluid design. It is often useful to set 
+   a percentage width and a pixel max-width, for example:
+   body{ margin:0 auto; padding:0 3%; width:94%; max-width:1280px; }
+   The gives you some versatile defaults: */
+body {
+    margin: auto;
+    max-width: 100%; /* often overidden to a pixel value */
+    overflow:hidden; /* prevent bit.ly/collapsing-margins */
+    word-wrap: break-word; /* allow text to wrap */
+}
 
-/* Allow code to wrap better. */
-code { word-wrap:break-word }
- 
 /* =========================================================
    Responsive Embedded Media and Form Elements.
    Use !important as needed to override inline styles.
    ========================================================= */
 
 /*
- * Don't use `height:auto` on embed|iframe|object due to vertical clipping.
+ * Don't use `height:auto` on iframe|object|embed due to vertical clipping.
  * Using `width:inherit` on img's is safe. Using it on other media elems may hide them.
  * Add !important to the `max-width` and `height` directives as needed. (See .rwd-force) 
  */
-img,audio,canvas,math,svg,video,embed,iframe,object,input,textarea,progress,meter,datalist,output { max-width:100% }
-img,audio,canvas,math,svg,video { height: auto }
+img,audio,video,canvas,iframe,object,embed,input,textarea,progress,meter,datalist,output { max-width:100% }
+img,audio,video,canvas { height: auto }
 img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
+
+/* Keep media elems tight to their containing elems ( h5bp.com/i/440 ) */
+img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
 
 /* 
  * Force override inline styles via: <body class="rwd-force">
  * The is useful with CMSs like WordPress that add inline styles. 
  */
-.rwd-force img, img.rwd-force { max-width: 100% !important; height: auto !important }
+.rwd-force img, img.rwd-force { 
+    max-width: 100% !important; 
+    height: auto !important; 
+}
 
 /* 
- * Videohelper classes based on magic by @beep
+ * Video helper classes based on magic by @beep
  * example usage:
    <div class="rwd-wrap-4:3">
        <iframe width="640" height="480" ...></iframe>
@@ -51,12 +62,14 @@ img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
 .rwd-wrap-4\:3      { padding-top: 75% }
 .rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
 
-/* ========================================================
-   Responsive Tables - Drop tables in small viewports.
-   @link css-tricks.com/responsive-data-tables/
-   ======================================================== */
-
-@media all and (max-width:20em) {
-    table,thead,tbody,tfoot,th,td,tr { display: block }
-    tr+tr { margin-top: 1em }
-}
+/*
+ * Data table ideas from @link css-tricks.com/responsive-data-tables/
+ * I commented this out b/c it is only applicable to data tables, and 
+ * you'd likely need to customize the width. It "drops" tables in 
+ * viewports where they don't fit:
+ =======
+        @media all and (max-width:20em) {
+            table,thead,tbody,tfoot,th,td,tr { display: block }
+            tr+tr { margin-top: 1em }
+        }
+ */

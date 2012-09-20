@@ -19,12 +19,13 @@ $nfo = '/* :::::::::::::::::: '
 . "\n" . ' * @date  ' . date('Y-m-d')
 . "\n" . ' * ::::::::::::::::: */';
 
-// after hours of trial and error:
+// Hours of trial and error. This won't catch everything, but it shouldn't break anything either. 
+// Needless to say this is experimental. Please report issues @ github.com/ryanve/css3base/issues
 function css3base_compress ($css) {
 	if ( empty($css) || !is_string($css) ) { return false; }
 	$doc = array();
-	preg_match( '/\/\*![\s\S]+?\*\//', $css, $doc );
-	$doc = isset($doc[0]) ? $doc[0] : '';
+	preg_match( '/\/\*![\s\S]+?\*\//', $css, $doc );  // `/*!` comments
+	$doc = isset($doc[0]) ? $doc[0] : ''; // the initial `/*!` docblock
 	$css = preg_replace( '!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $css ); // remove comments
 	$css = preg_replace( '/\s+/', ' ', $css ); // whitespace to single spaces
 	$css = preg_replace( '/([\w\-])\s*(,|;|{|})\s+({|}|;|,|\+|\.|\-|!|::)/', '$1$2$3', $css ); // leading spaces

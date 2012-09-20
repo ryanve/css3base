@@ -1,9 +1,10 @@
 /*!
- * CSS for implementing Solarized colors | 2012-09-18
- * @link  ethanschoonover.com/solarized (MIT License)
- * @link  css3base.com (CC0 License)
- * @example <html class="solarized"> for light background
- * @example <html class="solarized dark"> for dark background
+ * solarized.css | implementation by @ryanve of @ethanschoonover's "Solarized" color scheme
+ * @version  2012-09-18
+ * @link     css3base.com (CC0 license)
+ * @link     ethanschoonover.com/solarized (MIT license)
+ * @example  <html class="solarized">
+ * @example  <html class="solarized dark">
  */
 
 /* selected text ===== these combos seem to work well for solarized ======= */
@@ -17,7 +18,7 @@
   font-size:1em; white-space:pre; white-space:pre-wrap; word-wrap:break-word }
 
 /* Default Colors ========================================================= */
-/* Make `.solarized.dark .solarized` light for proper inversing. */
+/* Make `.solarized .solarized` light for proper inversing. */
 .solarized,.solarized .solarized { color:#839496;background:#fdf6e3 } /* base0 /base3  */
 .solarized.dark { color:#657b83;background:#002b36 } /* base00/base03 */ 
 

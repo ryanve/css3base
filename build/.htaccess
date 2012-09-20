@@ -1,0 +1,10 @@
+RewriteEngine On
+
+# could do 
+# RewriteRule ^(/?)$ /build/.build.php
+
+# Pass build request to the builder
+RewriteRule ^([\w\-\,]+) /build/.build.php?build=$1
+
+# could redirect direct dir requests to the homepage
+# RedirectMatch 301 ^/build(/?)$ /

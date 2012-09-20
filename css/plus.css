@@ -1,0 +1,92 @@
+/*!
+ * plus.css | mobile-first Fibonacci text by @ryanve
+ * @version  2012-09-18
+ * @link     css3base.com
+ * @license  creativecommons.org/publicdomain/zero/1.0/
+ */
+
+/*  ========================================================
+    spacing
+    ========================================================  */
+
+body { line-height:1.382 }
+h1,.h1 { margin:.382em 0 }
+h2,.h2 { margin:.500em 0 }
+h3,.h3 { margin:.618em 0 }
+h4,.h4 { margin:.854em 0 }
+h5,.h5 { margin:1em 0 }
+h6,.h6 { margin:1em 0 }
+hgroup>*{margin:0} /* hgrouped headers */
+dl,ul,ol,p,blockquote { margin-top: 1.171em; margin-bottom: 1.171em } /* =1.618/line-height */
+dd+dt { margin-top:1em }
+
+/*  ========================================================
+    sizing:
+        <html class="+">
+        <html class="++">
+        <html class="+++">
+    ========================================================  */
+
+body { font-size: 1em }
+h1,.\+ h1,.\+ .h1 { font-size:1.618em }
+h2,.\+ h2,.\+ .h2 { font-size:1.382em }
+h3,.\+ h3,.\+ .h3 { font-size:1.236em }
+h4,.\+ h4,.\+ .h4 { font-size:1.146em }
+h5,.\+ h5,.\+ .h5 { font-size:1em }
+h6,.\+ h6,.\+ .h6 { font-size:.854em }
+.lead { font-size:1.056em }
+
+/* specificity helper classes parlay the header sizes too */
+.\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1em }
+.\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.056em }
+.\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.090em }
+
+@media all and (min-width:20em) {
+    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.056em }
+    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.090em }
+    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.171em }
+    .lead { font-size:1.090em }
+}
+
+/* bump up sizes proportionately */
+
+@media all and (min-width:30em) {
+    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.090em }
+    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.171em }
+    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.309em }
+    h1,.\+ h1,.\+\+ h1,.\+\+\+ h1,.\+ .h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2em }
+    h2,.\+ h2,.\+\+ h2,.\+\+\+ h2,.\+ .h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 1.618em }
+    h3,.\+ h3,.\+\+ h3,.\+\+\+ h3,.\+ .h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.382em }
+    h4,.\+ h4,.\+\+ h4,.\+\+\+ h4,.\+ .h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.236em }
+    h5,.\+ h5,.\+\+ h5,.\+\+\+ h5,.\+ .h5,.\+\+ .h5,.\+\+\+ .h5 { font-size: 1.146em }
+    h6,.\+ h6,.\+\+ h6,.\+\+\+ h6,.\+ .h6,.\+\+ .h6,.\+\+\+ .h6 { font-size: 1em }
+    .lead { font-size:1.146em }
+}
+
+@media all and (min-width:40em) {
+    .\+\+ h1,.\+\+\+ h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2.618em }
+    .\+\+ h2,.\+\+\+ h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 2em }
+    .\+\+ h3,.\+\+\+ h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.618em }
+    .\+\+ h4,.\+\+\+ h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.382em }
+    .lead { font-size:1.236em }
+}
+
+@media all and (min-width:50em) {
+    .lead { font-size:1.309em }
+}
+
+@media all and (min-width:60em) {
+    .\+\+\+ h1,.\+\+\+ .h1 { font-size:3.236em }
+    .\+\+\+ h2,.\+\+\+ .h2 { font-size:2.618em }
+    .\+\+\+ h3,.\+\+\+ .h3 { font-size:2em }
+    .\+\+\+ h4,.\+\+\+ .h4 { font-size:1.618em }
+    .\+\+\+ h5,.\+\+\+ .h5 { font-size:1.236em }
+    .\+\+\+ h6,.\+\+\+ .h6 { font-size:1.090em }
+    .lead { font-size:1.382em }    
+}
+
+@media all and (min-width:70em) {
+    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.171em }
+    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.309em }
+    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.412em }
+}

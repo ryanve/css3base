@@ -1,0 +1,9 @@
+# concatention via SSI includes (as seen in htaccess @link h5bp.com)
+# @link github.com/h5bp/html5-boilerplate/blob/master/.htaccess
+# @link  bit.ly/apache-ssi
+
+<FilesMatch "\.css$">
+  Options +Includes
+  AddOutputFilterByType INCLUDES text/css
+  SetOutputFilter INCLUDES
+</FilesMatch>

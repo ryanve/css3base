@@ -8,13 +8,10 @@ if ( is_dir('css') ) $path = 'css/';
 else $path = rtrim(dirname(dirname(__FILE__)), '/') . '/css/';
 
 $build = isset($build) && $build !== '_' ? array_unique(explode(',', $build)) : array(
-	'normalize'
+    'normalize'
   , 'h5bp'
-  , 'responsive'
-  , 'plus'
+  , 'fit'
   , 'custom'
-  , 'helper'
-  , 'print'
 );
 
 $nfo = '/* :::::::::::::::::: '

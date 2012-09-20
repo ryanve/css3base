@@ -1,6 +1,5 @@
 /*!
  * @link  css3base.com
- * @link  css3base.com/css/ 
  * combined via SSI includes (as seen in htaccess @link h5bp.com)
  * @link  bit.ly/apache-ssi
  */
@@ -14,7 +13,7 @@
 /* <==end=== h5bp.css */
 
 /* ==start=> responsive.css */
-<!--#include file="responsive.min.css" -->
+<!--#include file="fit.css" -->
 /* <==end=== responsive.css */
 
 /* ==start=> plus.css */
@@ -22,7 +21,7 @@
 /* <==end=== plus.css */
 
 /* ==start=> solarized.css */
-<!--#include file="solarized.min.css" -->
+<!--#include file="solarized.css" -->
 /* <==end=== solarized.css */
 
 /* ==start=> custom.css */

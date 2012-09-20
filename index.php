@@ -30,7 +30,6 @@
         form li+li { margin-top: 2px }
         .file:hover { cursor:pointer }
         .no-js .file:hover,.oldie .file:hover { cursor:none }
-        summary input { display:inline-block; padding: .382em }
         #build { padding:.3em 1em; font-weight:bold }
         @media screen and (min-width:310px) {
             #logo{ width:160px; height:160px }

@@ -1,6 +1,6 @@
 /*!
  * rad.css | color scheme for code and beyond by @ryanve
- * @version  2012-09-16
+ * @version  2012-09-21
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  * @example  <div class="rad"> for light background
@@ -9,7 +9,7 @@
 
 /* selected text (these must be declared separately) ============== */
 ::-moz-selection { background:#f13;color:#133;text-shadow:none }
-::selection { background:#8d2;color:#133;text-shadow:none }
+     ::selection { background:#8d2;color:#133;text-shadow:none }
 /*
 ::-moz-selection{background:#b3d4fc;color:inherit;text-shadow:none}
 ::selection{background:#b3d4fc;color:#222;text-shadow:none}
@@ -32,12 +32,11 @@
 .rad pre em, .pre em, pre.rad em, .rad code em { font-style:normal; font-weight:bold }
 
 /* Emphasized/un-emphasized Colors =============================== */
-.rad small,.rad .rad small, 
-.rad.dark em, .rad.dark strong {}
-.rad em, .rad .rad em, .rad strong, 
-.rad .rad strong, .rad.dark small {}
-/* IE7- does not support inherit so use IE6/7 star hack for 100% instead */
-.rad pre small, .pre small, pre.rad small, .rad code small { font-size:inherit;*font-size:100% }
+.rad small,.rad .rad small,.rad.dark em, .rad.dark strong {}
+.rad em, .rad .rad em, .rad strong,.rad .rad strong, .rad.dark small {}
+.rad pre small, .pre small, pre.rad small, .rad code small {
+    font-size:inherit;*font-size:100% /* IE7- can't inherit so give it 100% */
+}
 
 /* Background Highlights (base2/base02) =========================== */
 .rad mark { color:#628 } /* IE7- */
@@ -51,28 +50,9 @@
 .rad.dark a { color:#fa0 }
 .rad a:hover { color:#2da }
 
-/* Color helper classes =========================================== */
-.rad .yellow   { color:#ed3 !important }
-.rad .orange  { color:#fa0 !important }
-.rad .fire { color:#e30 !important }
-.rad .red  { color:#f13 !important }
-.rad .lava  { color:#833 !important }
-.rad .magenta { color:#e05 !important }
-.rad .violet { color:#628 !important }
-.rad .blue { color:#09b !important }
-.rad .teal { color:#588 !important }
-.rad .cyan { color:#2da !important }
-.rad .green { color:#0a4 !important }
-.rad .brown { color:#321 !important }
-.rad .drab  { color:#653 !important }
-.rad .teal  {color:#588 !important}
-.rad .sand  {color:#c95 !important}
-.rad .lime  {color:#8d2 !important}
-.rad .crimson  {color:#d01 !important}
-
 /* Code Colors =========================================================== */
-.rad .keyword,.rad .boolean {font-weight:bold}
-.rad \@tag {color:#09b}  /* usage: <span class="@tag">@param</span> */
+.rad .keyword,.rad .boolean { font-weight:bold }
+.rad \@tag { color:#09b }  /* usage: <span class="@tag">@param</span> */
 .rad .operator { color:#8d2 }
 .rad .keyword { color:#628 }
 .rad .boolean,.rad .rad .boolean { color:#653 }
@@ -81,3 +61,22 @@
 .rad .string,.rad .rad .string { color:#588 }
 .rad.haze .string { color:#e05 }
 .rad .regex { color:#fa0 }
+
+/* Color helper classes =========================================== */
+.rad .yellow   { color:#ed3 }
+.rad .orange  { color:#fa0 }
+.rad .fire { color:#e30 }
+.rad .red  { color:#f13 }
+.rad .lava  { color:#833 }
+.rad .magenta { color:#e05 }
+.rad .violet { color:#628 }
+.rad .blue { color:#09b }
+.rad .teal { color:#588 }
+.rad .cyan { color:#2da }
+.rad .green { color:#0a4 }
+.rad .brown { color:#321 }
+.rad .drab  { color:#653 }
+.rad .teal  { color:#588 }
+.rad .sand  { color:#c95 }
+.rad .lime  { color:#8d2 }
+.rad .crimson  { color:#d01 }

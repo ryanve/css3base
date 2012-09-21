@@ -7,17 +7,17 @@
  * @example  <div class="rad dark"> for dark background
  */
 
-/* selected text (these must be declared separately) ============== */
+/* Normalize <pre> and <code> ===================================== */
+pre, code, .pre, .code { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
+pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
+ 
+/* Selected Text (these must be declared separately) ============== */
 ::-moz-selection { background:#f13;color:#133;text-shadow:none }
      ::selection { background:#8d2;color:#133;text-shadow:none }
 /*
 ::-moz-selection{background:#b3d4fc;color:inherit;text-shadow:none}
 ::selection{background:#b3d4fc;color:#222;text-shadow:none}
 */
-
-/* pre styles from normalize.css plus .pre helper class =========== */
-.pre, pre { font-family:monospace,serif; _font-family:'courier new',monospace;
-  font-size:1em; white-space:pre; white-space:pre-wrap; word-wrap:break-word }
 
 /* Default Colors ================================================= */
 /* Make `.rad .rad` light for proper inversing. */

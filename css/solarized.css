@@ -6,15 +6,15 @@
  * @example  <html class="solarized">
  * @example  <html class="solarized dark">
  */
+ 
+/* Normalize <pre> and <code> ============================================= */
+pre, code, .pre, .code { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
+pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
 
-/* selected text ===== these combos seem to work well for solarized =======
+/* Selected Text ===== these combos seem to work well for solarized =======
    === FF renders the colors exactly - other browsers may not ============= */ 
 ::-moz-selection { background:#2aa198; color:#002b36; text-shadow:none }
      ::selection { background:#2aa198; color:#002b36; text-shadow:none }
- 
-/* pre styles from normalize.css plus .pre helper class =================== */
-.pre, pre { font-family:monospace,serif; _font-family:'courier new',monospace;
-  font-size:1em; white-space:pre; white-space:pre-wrap; word-wrap:break-word }
 
 /* Default Colors ========================================================= */
 /* Make `.solarized .solarized` light for proper inversing. */

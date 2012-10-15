@@ -1,6 +1,6 @@
 /*!
  * plus.css | mobile-first Fibonacci text by @ryanve
- * @version  2012-09-18
+ * @version  2012-10-15
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -90,3 +90,6 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.309em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.412em }
 }
+
+/* allow for inline headers when wrapped inside .lead */
+.lead h1 { display:inline; font-size:inherit }

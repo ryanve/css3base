@@ -77,11 +77,11 @@
 
             <li><input checked type=checkbox data-file="h5bp"> <strong class="file" title="&radic;">h5bp.css</strong> <small><span class=shape>&#9648;</span> Defaults from the <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/h5bp.css">raw</a></small>
 
-            <li><input checked type=checkbox data-file="fit"> <strong class="file" title="&radic;">fit.css</strong> <small><span class=shape>&#9648;</span> Base responsive styles for HTML5 elements by <a href="http://github.com/ryanve/css3base">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/fit.css">raw</a></small>
+            <li><input checked type=checkbox data-file="fit"> <strong class="file" title="&radic;">fit.css</strong> <small><span class=shape>&#9648;</span> Base responsive styles for HTML5 elements by <a href="https://github.com/ryanve/css3base/blob/master/css/fit.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/fit.css">raw</a></small>
 
-            <li><input type=checkbox data-file="plus"> <strong class="file" title="&radic;">plus.css</strong> <small><span class=shape>&#9648;</span> Mobile-first <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Wikipedia &raquo;">Fibonacci</a> text by <a href="http://github.com/ryanve/css3base">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/plus.css">raw</a></small>
+            <li><input type=checkbox data-file="plus"> <strong class="file" title="&radic;">plus.css</strong> <small><span class=shape>&#9648;</span> Mobile-first <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Wikipedia &raquo;">Fibonacci</a> text by <a href="https://github.com/ryanve/css3base/blob/master/css/plus.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/plus.css">raw</a></small>
 
-            <!--<li><input type=checkbox data-file="rad"> <strong class="file"  title="&radic;">rad.css</strong> <small><span class=shape>&#9648;</span> 80s-inspired color scheme by <a href="http://github.com/ryanve/css3base">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/rad.css">raw</a></small>-->
+            <!--<li><input type=checkbox data-file="rad"> <strong class="file"  title="&radic;">rad.css</strong> <small><span class=shape>&#9648;</span> 80s-inspired color scheme by <a href="https://github.com/ryanve/css3base/blob/master/css/rad.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/rad.css">raw</a></small>-->
 
             <li><input type=checkbox data-file="solarized"> <strong class="file" title="&radic;">solarized.css</strong> <small><span class=shape>&#9648;</span> CSS for implementing <a href="http://ethanschoonover.com/solarized">Solarized</a> colors <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/solarized.css">raw</a></small>
 
@@ -105,6 +105,7 @@
                 <li class="visuallyhidden"><a href="https://github.com/ryanve/css3base/issues" title="report an issue" accesskey=9>Issue?</a>
                 <!--<li class="hidden"><a accesskey=x href="http://validator.w3.org/check?uri=referer">validate</a>-->
                 <li class="hidden"><a accesskey=x href="http://html5.validator.nu/?doc=http://css3base.com">validate</a>
+                <li class="hidden"><a accesskey=o href="http://gsnedders.html5.org/outliner/process.py?url=http://css3base.com">outline</a>
                 <li class="visuallyhidden"><a id="end" href="#end" title="down" accesskey=z><span class=shape>&#9660;</span></a>
             </ul>
         </nav>
@@ -116,8 +117,10 @@
         a: page up
         g: github repo
         i: css index
+        o: outline
         r: author
         u: build
+        v: validate
         z: page down
     -->
 

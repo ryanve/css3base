@@ -1,7 +1,7 @@
 /*!
  * fit.css   Base responsive styles for HTML5 elements.
  * @author   Ryan Van Etten <@ryanve>
- * @version  2012-09-20
+ * @version  2012-10-17
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -42,7 +42,7 @@ img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
     height: auto !important; 
 }
 
-/*  Video helper classes based on magic by @beep
+/*  Video helper classes based on alistapart.com/articles/creating-intrinsic-ratios-for-video/
  *  example usage:
     <div class="rwd-wrap-4:3">
         <iframe width="640" height="480" ...></iframe>

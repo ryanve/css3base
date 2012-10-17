@@ -51,14 +51,8 @@ img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
 .rwd-wrap-4\:3      { padding-top: 75% }
 .rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
 
-/*
- * Data table ideas from @link css-tricks.com/responsive-data-tables/
- * I commented this out b/c it is only applicable to data tables, and 
- * you'd likely need to customize the width. It "drops" tables in 
- * viewports where they don't fit:
- =======
-        @media all and (max-width:20em) {
-            table,thead,tbody,tfoot,th,td,tr { display: block }
-            tr+tr { margin-top: 1em }
-        }
+/*  Useful Links
+ *  @link  css-tricks.com/rundown-of-handling-flexible-media/
+ *  @link  bit.ly/5-responsive
+ *  @link  stackoverflow.com/a/9807320/770127
  */

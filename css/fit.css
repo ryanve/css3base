@@ -25,7 +25,7 @@ body {
 /*  Responsive embedded media and form elements =====
  *  Don't use `height:auto` on iframe|object|embed due to vertical clipping.
  *  Using `width:inherit` on img's is safe. Using it on other media elems may hide them.
- *  Add !important to the `max-width` and `height` directives as needed. (See .rwd-force) 
+ *  Add !important to the `max-width` and `height` directives as needed. 
  */
 img,audio,video,canvas,iframe,object,embed,input,textarea,progress,meter,datalist,output { max-width:100% }
 img,audio,video,canvas { height: auto }
@@ -34,13 +34,8 @@ img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
 /*  Keep media elems tight to their containing elems ( h5bp.com/i/440 ) */
 img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
 
-/*  Force override inline styles via: <body class="rwd-force">
- *  The is useful with CMSs like WordPress that add inline styles. 
- */
-.rwd-force img, img.rwd-force {
-    max-width: 100% !important; 
-    height: auto !important; 
-}
+/*  Contain elems that have (CMS-generated) inline styles. */
+[style] { max-width: 100% }
 
 /*  Video helper classes based on alistapart.com/articles/creating-intrinsic-ratios-for-video/
  *  example usage:

@@ -7,37 +7,39 @@
  */
 
 /*  Prevent horizontal scrollbar. If all the other styles 
-    on the page properly set in percentages, then you don't
-    need this, but it acts as a nice catch. 
-*/ 
+ *  on the page are properly set in percentages, then you
+ *  don't need this, but it acts as a nice catch. 
+ */ 
 html { overflow-x:hidden }
 
 /*  Prepare body for fluid design, w/o forcing any particular measurements.
-    This gives you a versatile base that is easy to build on:
-*/
+ *  This gives you a versatile default base that is easy to build on:
+ */
 body {
     margin: auto;
-    max-width: 100%; /* may be overidden to a pixel value */
+    max-width: 100%; /* often cascaded to a pixel value */
     overflow:hidden; /* prevent bit.ly/collapsing-margins */
     word-wrap: break-word; /* allow text to wrap */
 }
 
 /*  Responsive embedded media and form elements =====
  *  Don't use `height:auto` on iframe|object|embed due to vertical clipping.
- *  Using `width:inherit` on img's is safe. Using it on other media elems may hide them.
- *  Add !important to the `max-width` and `height` directives as needed. 
+ *  Add !important to the `max-width` and `height` directives as needed.
  */
 img,audio,video,canvas,iframe,object,embed,input,textarea,progress,meter,datalist,output { max-width:100% }
 img,audio,video,canvas { height: auto }
-img { width: inherit } /* makes `max-width:100%; height:auto;` work in IE8. */
+
+/*  IE8-specific hack to make `max-width:100%;height:auto` work. Only applies to IE8. IE7 is fine.
+ *  It prevents img height from being distorted when shrunk (stackoverflow.com/a/8831173/770127) */
+@media \0screen { img { width: auto } }
 
 /*  Keep media elems tight to their containing elems ( h5bp.com/i/440 ) */
 img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
 
-/*  Contain elems that have (CMS-generated) inline styles. */
+/*  Contain elems that have (CMS-generated) inline styles: */
 [style] { max-width: 100% }
 
-/*  Video helper classes based on alistapart.com/articles/creating-intrinsic-ratios-for-video/
+/*  Video helper classes based on bit.ly/ratios-for-video
  *  example usage:
     <div class="rwd-wrap-4:3">
         <iframe width="640" height="480" ...></iframe>
@@ -47,8 +49,8 @@ img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
     </div>
  */
 .rwd-wrap-16\:9,.rwd-wrap-4\:3 { position: relative }
-.rwd-wrap-16\:9    { padding-top: 56.25% }
-.rwd-wrap-4\:3      { padding-top: 75% }
+.rwd-wrap-16\:9  { padding-top: 56.25% }
+.rwd-wrap-4\:3   { padding-top: 75% }
 .rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
 
 /*  Useful Links

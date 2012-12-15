@@ -1,8 +1,31 @@
-/*! helper classes via @link h5bp.com */ 
-.ir{background-color:transparent;border:0;overflow:hidden;*text-indent:-9999px}
-.ir:before{content:"";display:block;width:0;height:100%}
-.hidden{display:none!important;visibility:hidden}
-.visuallyhidden{border:0;clip:rect(0 0 0 0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}
-.visuallyhidden.focusable:active,.visuallyhidden.focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}
-.invisible{visibility:hidden}
-.clearfix:before,.clearfix:after{content:" ";display:table}.clearfix:after{clear:both}.clearfix{*zoom:1}
+/*! 
+ * helper classes via @link h5bp.com 
+ * @link     css3base.com
+ * @version  2012-12-14
+ */ 
+.ir {/* image replacement */
+    background-color:transparent; 
+    border:0; overflow:hidden; 
+    *text-indent:-9999px; /* IE6/7 */
+}
+.ir:before {
+    content:""; display:block; width:0; height:100%; 
+}
+.hidden {/* h5bp.com/u */
+    display:none!important;
+    visibility:hidden;
+} 
+.visuallyhidden {/* h5bp.com/v */
+    clip:rect(0 0 0 0);width:1px;height:1px;
+    overflow:hidden;position:absolute;
+    border:0;margin:-1px;padding:0;
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip:auto;width:auto;height:auto;
+    overflow:visible;position:static;margin:0;
+}
+.invisible { visibility:hidden; }
+.clearfix:before,.clearfix:after { content:" "; display:table; }
+.clearfix:after { clear:both; } 
+.clearfix { *zoom:1; } /* IE6/7 */

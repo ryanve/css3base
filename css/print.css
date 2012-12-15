@@ -1,17 +1,22 @@
-/*! hybrid print styles adapted from h5bp.com */
+/*! 
+ * print styles adapted from h5bp.com 
+ * @version 2012-12-14
+ */
 @media print {
   * {
-    color:black!important;background:transparent!important;
-    box-shadow:none!important;text-shadow:none!important;
-    filter:none!important;-ms-filter:none!important
+    color:black !important; /* black prints faster: h5bp.com/s */
+    background:transparent !important;
+    box-shadow:none !important; text-shadow:none !important;
+    filter:none !important; -ms-filter:none !important;
   }
-  a[href]:after {content:" (" attr(href) ")"; font-weight:normal}
-  header a:after,footer a:after,nav a:after,figure>a:after,a[rel="tag"]:after,
-  h1 a:after,h2 a:after,h3 a:after,h4 a:after,h5 a:after,h6 a:after,.ir a:after,
-  a[href^="javascript:"]:after, a[href^="#"]:after {content:""!important}
-  thead { display:table-header-group }
+  a[href].print-href, 
+  .print-href a[href]:not(:empty):not(.ir):not([href^="#"]):not([href^="javascript:"]):after {
+    content:" (" attr(href) ")"; 
+    font-weight:normal; 
+  }
+  thead { display:table-header-group } /* h5bp.com/t */
   audio,video,img,pre,tr,blockquote { page-break-inside:avoid }
-  audio,video,img { max-width:100%!important }
+  audio,video,img { max-width:100% !important }
   h2,h3,p { orphans:3; widows:3; }
   h2,h3 { page-break-after:avoid }
 }

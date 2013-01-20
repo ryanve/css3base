@@ -30,7 +30,6 @@ h3,.\+ h3,.\+ .h3 { font-size:1.236em }
 h4,.\+ h4,.\+ .h4 { font-size:1.146em }
 h5,.\+ h5,.\+ .h5 { font-size:1em }
 h6,.\+ h6,.\+ .h6 { font-size:.854em }
-/* .lead { font-size:1.056em } */
 
 /* specificity helper classes parlay the header sizes too */
 .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1em }
@@ -41,7 +40,6 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.056em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.090em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.171em }
-    /* .lead { font-size:1.090em } */
 }
 
 /* bump up sizes proportionately */
@@ -56,7 +54,6 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     h4,.\+ h4,.\+\+ h4,.\+\+\+ h4,.\+ .h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.236em }
     h5,.\+ h5,.\+\+ h5,.\+\+\+ h5,.\+ .h5,.\+\+ .h5,.\+\+\+ .h5 { font-size: 1.146em }
     h6,.\+ h6,.\+\+ h6,.\+\+\+ h6,.\+ .h6,.\+\+ .h6,.\+\+\+ .h6 { font-size: 1em }
-    /* .lead { font-size:1.146em } */
 }
 
 @media all and (min-width:40em) {
@@ -64,11 +61,6 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .\+\+ h2,.\+\+\+ h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 2em }
     .\+\+ h3,.\+\+\+ h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.618em }
     .\+\+ h4,.\+\+\+ h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.382em }
-    /* .lead { font-size:1.236em } */
-}
-
-@media all and (min-width:50em) {
-    /* .lead { font-size:1.309em } */
 }
 
 @media all and (min-width:60em) {
@@ -78,7 +70,6 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .\+\+\+ h4,.\+\+\+ .h4 { font-size:1.618em }
     .\+\+\+ h5,.\+\+\+ .h5 { font-size:1.236em }
     .\+\+\+ h6,.\+\+\+ .h6 { font-size:1.090em }
-    /* .lead { font-size:1.382em } */ 
 }
 
 @media all and (min-width:70em) {
@@ -86,6 +77,3 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.309em }
     .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.412em }
 }
-
-/* allow for inline headers when wrapped inside .lead */
-/* .lead h1 { display:inline; font-size:inherit } */

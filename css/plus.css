@@ -1,6 +1,6 @@
 /*!
  * plus.css | mobile-first Fibonacci text by @ryanve
- * @version  2013-01-19
+ * @version  2013-01-20
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -10,15 +10,11 @@
     ========================================================  */
 
 body { line-height:1.382 }
-h1,.h1 { margin:.382em 0 }
-h2,.h2 { margin:.500em 0 }
-h3,.h3 { margin:.618em 0 }
-h4,.h4 { margin:.854em 0 }
-h5,.h5 { margin:1em 0 }
-h6,.h6 { margin:1em 0 }
-hgroup>* { margin:0 } /* hgrouped headers */
-dl,ul,ol,p,blockquote { margin-top: 1.171em; margin-bottom: 1.171em } /* =1.618/line-height */
-dd+dt { margin-top:1em }
+dd+dt { margin-top:1.171em } /* =1.618/line-height */
+dl,ul,ol,p,pre,blockquote { margin-top:1.171em; margin-bottom:1.171em }
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 { margin-top:1.171em; margin-bottom:1em }
+hgroup > :not(:first-child) { margin-top:.5em }
+hgroup > :not(:last-child) { margin-bottom:.5em }
 
 /*  ========================================================
     sizing:

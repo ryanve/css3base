@@ -6,7 +6,7 @@
     <link rel=dns-prefetch href=//airve.github.com>
     <link rel=dns-prefetch href=//cdn.airve.com>
 
-    <title>css3base</title>
+    <title>css3base: opensource CSS modules</title>
     <!-- 
         view the source of this entire site
         @link    github.com/ryanve/css3base   (please contribute =)
@@ -17,7 +17,7 @@
     <meta name=author content="Ryan Van Etten">
 
     <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,helper,print.2012091800.css">
-    <link rel=image_src href="http://css3base.com/apple-touch-icon.png">
+    <link rel=image_src href="http://css3base.com/apple-touch-icon.png"><!-- repurpose ios icon -->
 
     <style>
         /* The purpose of the `.custom` class is to override specificity from base sheets. */
@@ -75,7 +75,7 @@
         <ul>
             <li><input checked type=checkbox data-file="normalize"> <strong class="file" title="&radic;">normalize.css</strong> <small><span class=shape>&#9648;</span> The modern alternative to CSS resets by <a href="https://github.com/necolas/normalize.css">@necolas</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/normalize.css">raw</a></small>
 
-            <li><input checked type=checkbox data-file="h5bp"> <strong class="file" title="&radic;">h5bp.css</strong> <small><span class=shape>&#9648;</span> Defaults from the <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/h5bp.css">raw</a></small>
+            <li><input type=checkbox data-file="h5bp"> <strong class="file" title="&radic;">h5bp.css</strong> <small><span class=shape>&#9648;</span> Defaults from the <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/h5bp.css">raw</a></small>
 
             <li><input checked type=checkbox data-file="fit"> <strong class="file" title="&radic;">fit.css</strong> <small><span class=shape>&#9648;</span> Base responsive styles for HTML5 elements by <a href="https://github.com/ryanve/css3base/blob/master/css/fit.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/fit.css">raw</a></small>
 

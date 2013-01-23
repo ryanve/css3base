@@ -1,6 +1,6 @@
 /*!
  * plus.css | mobile-first Fibonacci text by @ryanve
- * @version  2013-01-20
+ * @version  2013-01-23
  * @link     css3base.com
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
@@ -27,7 +27,7 @@ body { font-size: 1em }
 h1,.\+ h1,.\+ .h1 { font-size:1.618em }
 h2,.\+ h2,.\+ .h2 { font-size:1.382em }
 h3,.\+ h3,.\+ .h3 { font-size:1.236em }
-h4,.\+ h4,.\+ .h4 { font-size:1.146em }
+h4,.\+ h4,.\+ .h4 { font-size:1em }
 h5,.\+ h5,.\+ .h5 { font-size:1em }
 h6,.\+ h6,.\+ .h6 { font-size:.854em }
 
@@ -51,25 +51,18 @@ h6,.\+ h6,.\+ .h6 { font-size:.854em }
     h1,.\+ h1,.\+\+ h1,.\+\+\+ h1,.\+ .h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2em }
     h2,.\+ h2,.\+\+ h2,.\+\+\+ h2,.\+ .h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 1.618em }
     h3,.\+ h3,.\+\+ h3,.\+\+\+ h3,.\+ .h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.382em }
-    h4,.\+ h4,.\+\+ h4,.\+\+\+ h4,.\+ .h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.236em }
-    h5,.\+ h5,.\+\+ h5,.\+\+\+ h5,.\+ .h5,.\+\+ .h5,.\+\+\+ .h5 { font-size: 1.146em }
-    h6,.\+ h6,.\+\+ h6,.\+\+\+ h6,.\+ .h6,.\+\+ .h6,.\+\+\+ .h6 { font-size: 1em }
 }
 
 @media all and (min-width:40em) {
     .\+\+ h1,.\+\+\+ h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2.618em }
     .\+\+ h2,.\+\+\+ h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 2em }
     .\+\+ h3,.\+\+\+ h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.618em }
-    .\+\+ h4,.\+\+\+ h4,.\+\+ .h4,.\+\+\+ .h4 { font-size: 1.382em }
 }
 
 @media all and (min-width:60em) {
     .\+\+\+ h1,.\+\+\+ .h1 { font-size:3.236em }
     .\+\+\+ h2,.\+\+\+ .h2 { font-size:2.618em }
     .\+\+\+ h3,.\+\+\+ .h3 { font-size:2em }
-    .\+\+\+ h4,.\+\+\+ .h4 { font-size:1.618em }
-    .\+\+\+ h5,.\+\+\+ .h5 { font-size:1.236em }
-    .\+\+\+ h6,.\+\+\+ .h6 { font-size:1.090em }
 }
 
 @media all and (min-width:70em) {

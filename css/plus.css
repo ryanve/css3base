@@ -5,68 +5,38 @@
  * @license  creativecommons.org/publicdomain/zero/1.0/
  */
 
-/*  ========================================================
-    spacing
-    ========================================================  */
+body { line-height:1.4;font-size:1em }
+dd+dt { margin-top:inherit }
+h1,.h1,h2,.h2 { margin-top:.618em; margin-bottom:.618em }
+h3,h4,h5,h6,.h3,.h4,.h5,.h6 { margin-top:1.146em; margin-bottom:1em }
+hgroup > * { margin-top:8px; margin-bottom:8px }
 
-body { line-height:1.382 }
-dd+dt { margin-top:1.171em } /* =1.618/line-height */
-dl,ul,ol,p,pre,blockquote { margin-top:1.171em; margin-bottom:1.171em }
-h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 { margin-top:1.171em; margin-bottom:1em }
-hgroup > :not(:first-child) { margin-top:.5em }
-hgroup > :not(:last-child) { margin-bottom:.5em }
+h1,.h1 { font-size:1.618em }
+h2,.h2 { font-size:1.382em }
+h3,.h3 { font-size:1.146em }
+h4,.h4 { font-size:1em }
+h5,.h5 { font-size:.944em }
+h6,.h6 { font-size:.854em }
 
 /*  ========================================================
-    sizing:
+    size bumps:
         <html class="+">
         <html class="++">
         <html class="+++">
     ========================================================  */
 
-body { font-size: 1em }
-h1,.\+ h1,.\+ .h1 { font-size:1.618em }
-h2,.\+ h2,.\+ .h2 { font-size:1.382em }
-h3,.\+ h3,.\+ .h3 { font-size:1.236em }
-h4,.\+ h4,.\+ .h4 { font-size:1em }
-h5,.\+ h5,.\+ .h5 { font-size:1em }
-h6,.\+ h6,.\+ .h6 { font-size:.854em }
-
-/* specificity helper classes parlay the header sizes too */
-.\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1em }
-.\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.056em }
-.\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.090em }
+.\+  { font-size:1em  }
+.\+\+ { font-size:1.090em  }
+.\+\+\+ { font-size:1.146em }
 
 @media all and (min-width:20em) {
-    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.056em }
-    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.090em }
-    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.171em }
+    .\+  { font-size:1.090em }
+    .\+\+ { font-size:1.146em  }
+    .\+\+\+ { font-size:1.236em }
 }
-
-/* bump up sizes proportionately */
 
 @media all and (min-width:30em) {
-    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.090em }
-    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.171em }
-    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.309em }
-    h1,.\+ h1,.\+\+ h1,.\+\+\+ h1,.\+ .h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2em }
-    h2,.\+ h2,.\+\+ h2,.\+\+\+ h2,.\+ .h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 1.618em }
-    h3,.\+ h3,.\+\+ h3,.\+\+\+ h3,.\+ .h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.382em }
-}
-
-@media all and (min-width:40em) {
-    .\+\+ h1,.\+\+\+ h1,.\+\+ .h1,.\+\+\+ .h1 { font-size: 2.618em }
-    .\+\+ h2,.\+\+\+ h2,.\+\+ .h2,.\+\+\+ .h2 { font-size: 2em }
-    .\+\+ h3,.\+\+\+ h3,.\+\+ .h3,.\+\+\+ .h3 { font-size: 1.618em }
-}
-
-@media all and (min-width:60em) {
-    .\+\+\+ h1,.\+\+\+ .h1 { font-size:3.236em }
-    .\+\+\+ h2,.\+\+\+ .h2 { font-size:2.618em }
-    .\+\+\+ h3,.\+\+\+ .h3 { font-size:2em }
-}
-
-@media all and (min-width:70em) {
-    .\+ .\+, .\+\+ .\+, .\+\+\+ .\+ { font-size:1.171em }
-    .\+ .\+\+, .\+\+ .\+\+, .\+\+\+ .\+\+ { font-size:1.309em }
-    .\+ .\+\+\+, .\+\+ .\+\+\+, .\+\+\+ .\+\+\+ { font-size:1.412em }
+    h1,.h1 { font-size:2em }
+    h2,.h2 { font-size:1.618em }
+    h3,.h3 { font-size:1.236em }
 }

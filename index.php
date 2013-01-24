@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!--[if lt IE 9]><html class="oldie ++ rad no-js custom"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="++ rad no-js custom"> <!--<![endif]-->
 <head>
@@ -16,7 +16,7 @@
     <meta name=description content="Modular css builder for base stylesheets.">
     <meta name=author content="Ryan Van Etten">
 
-    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,helper,print.2012091800.css">
+    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,helper,print.20130120.css">
     <link rel=image_src href="http://css3base.com/apple-touch-icon.png"><!-- repurpose ios icon -->
 
     <style>
@@ -51,12 +51,12 @@
     <script src="http://airve.github.com/js/modernizr/modernizr_shiv.min.js"></script>
    
 </head>
-<body id="start" data-ymd="<?php echo date('Ymd'); ?>">
+<body id="start" data-ymd="<?php echo date('Ymd'); ?>" itemscope itemtype="http://schema.org/WebApplication">
 
     <header id="header">
         <h1>
-            <a href="http://css3base.com" accesskey="1" rel="home">
-                <img id="logo" src="http://cdn.airve.com/logo/css3base/300/css3base_logo_red_300.png" width="300" height="300" alt="css3base">
+            <a itemprop="url" href="http://css3base.com" accesskey="1" rel="home">
+                <img id="logo" itemprop="image thumbnailUrl" src="http://cdn.airve.com/logo/css3base/300/css3base_logo_red_300.png" width="300" height="300" alt="css3base">
             </a>
         </h1>
     </header>
@@ -67,9 +67,13 @@
 
     <noscript>
         For full functionality of this site it is necessary to enable JavaScript.
-        Here are the <a href="http://www.enable-javascript.com/" target="_blank">
+        Here are the <a href="http://www.enable-javascript.com/">
         instructions how to enable JavaScript in your web browser</a>.
     </noscript>
+    
+    <h2>
+        <span itemprop="name">css3base</span>: <span itemprop="description">modular css builder</span>
+    </h2>
     
     <form class="++">
         <ul>
@@ -96,19 +100,27 @@
     
     <footer id="footer">
         <nav>
+            <h3 class="visuallyhidden">Project Links</h3>
             <ul>
                 <li><a href="#start" title="up" accesskey="a"><span class=shape>&#9650;</span></a>
-                <li><a href="http://twitter.com/ryanve" title="Twitter: @ryanve" accesskey=r>@ryanve</a>
+                <li><a href="http://twitter.com/ryanve" title="Twitter: @ryanve" itemprop="creator" accesskey=r>@ryanve</a>
                 <li><a href="http://css3base.com/css/" title="css index" accesskey=i><b>/css</b></a>
                 <li><a href="http://cdn.airve.com/logo/css3base/" title="logo index"><b>/logo</b></a></li>
                 <li><a href="https://github.com/ryanve/css3base" title="repo" accesskey=g>Github</a>
                 <li class="visuallyhidden"><a href="https://github.com/ryanve/css3base/issues" title="report an issue" accesskey=9>Issue?</a>
-                <!--<li class="hidden"><a accesskey=x href="http://validator.w3.org/check?uri=referer">validate</a>-->
-                <li class="hidden"><a accesskey=x href="http://html5.validator.nu/?doc=http://css3base.com">validate</a>
-                <li class="hidden"><a accesskey=o href="http://gsnedders.html5.org/outliner/process.py?url=http://css3base.com">outline</a>
                 <li class="visuallyhidden"><a id="end" href="#end" title="down" accesskey=z><span class=shape>&#9660;</span></a>
             </ul>
         </nav>
+        
+        <div class="hidden">
+            <h3>Testing</h3>
+            <ul>
+                <!--<li><a accesskey=x href="http://validator.w3.org/check?uri=referer">validate</a>-->
+                <li><a accesskey="x" rel="nofollow" href="http://html5.validator.nu/?doc=http://css3base.com/">validate</a>
+                <li><a accesskey="o" rel="nofollow" href="http://gsnedders.html5.org/outliner/process.py?url=http://css3base.com/">outline</a>
+                <li><a accesskey="d" rel="nofollow" href="http://www.google.com/webmasters/tools/richsnippets?url=http://css3base.com/">data</a>
+            </ul>
+        </div>
     </footer>
 
     <!-- accesskeys: 

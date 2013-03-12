@@ -1,0 +1,12 @@
+/*!
+ * mono.css  subjective base styles for code elements
+ * @version  2013-01-04
+ * @link     css3base.com
+ * @license  creativecommons.org/publicdomain/zero/1.0/
+ */
+
+pre, .pre, code, kbd { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
+pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
+pre a, .pre a { font-weight:inherit; }
+code small { font-size:inherit; }
+a dfn, strong dfn, em dfn, code var, code mark, code var { font-style:inherit; }

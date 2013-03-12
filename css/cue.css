@@ -1,0 +1,37 @@
+/*!
+ * cue.css   CSS suggestions for cue.js
+ * @author   Ryan Van Etten <@ryanve>
+ * @license  CC0
+ * @link     cuejs.com
+ */
+
+/* Fix videos that bounce vertically. */
+video { vertical-align: baseline }
+
+/* Responsiveness ( see: css3base.com/css/fit.css ) */
+audio, video { max-width: 100%; height: auto; }
+
+/* The controls have dynamic classes that give you a lot of CSS options. I recommend viewing 
+   the DOM via the console while you interact with the controls to see the classes and attrs. */
+ 
+/* Hide disabled controls. Controls that are active will have the 
+   class .cue-active and controls that have been inserted but not 
+   activated with events will have the class .cue-inactive */
+.no-js .cue-controls, .cue-inactive  { display:none }
+
+/* Stylize <button>'s. */
+.cue-controls button, .cue-controls output { background:#000; color: #fff; margin:0; border:0; padding:.5em; }
+.cue-controls button:hover { background:#fff; color: #000; }
+
+/* Specific controls. Play and pause are designed to be the same element. It has
+   the .cue-pause class while playing and the .cue-play class while paused. The 
+   text shapes that you seen in the buttons are in <span>'s to make image replacement 
+   possible although for performance it is better to just stylize the font. */
+.cue-play {}
+.cue-pause {}
+.cue-prev {}
+.cue-next {}
+
+/* State classes. These get added to the containing elem that has the [data-cue] attribute. */
+.cue-paused {}
+.cue-playing {}

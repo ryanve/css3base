@@ -65,7 +65,8 @@ function getFile($file, $mode = 'min') {
 call_user_func(function() {
     $params = getParams(); 
     $nfo = '/* :::::::::::::::::: '
-        . "\n" . ' * @link  css3base.com/build/' . str_replace('.css', '', implode(',', $params->build))
+        . "\n" . ' * @link  css3base.com/build/' 
+        . preg_replace('#(\.\d+)?\.css#', '', implode(',', $params->build))
         . "\n" . ' * @date  ' . date('Y-m-d')
         . "\n" . ' * ::::::::::::::::: */';
     $output = array();

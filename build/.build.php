@@ -1,28 +1,21 @@
 <?php
+/**
+ * @link css3base.com
+ * @link github.com/ryanve/css3base
+ */
 
+namespace css3base;
+
+# set output to css:
 header('Content-type: text/css');
 
-parse_str($_SERVER['QUERY_STRING']);
- 
-if ( is_dir('css') ) $path = 'css/';
-else $path = rtrim(dirname(dirname(__FILE__)), '/') . '/css/';
-
-$build = isset($build) && $build !== '_' ? array_unique(explode(',', $build)) : array(
-    'normalize'
-  , 'h5bp'
-  , 'fit'
-  , 'custom'
-);
-
-$nfo = '/* :::::::::::::::::: '
-. "\n" . ' * @link  css3base.com/build/' . str_replace('.css', '', implode(',', $build)) 
-. "\n" . ' * @date  ' . date('Y-m-d')
-. "\n" . ' * ::::::::::::::::: */';
-
-// Hours of trial and error. This won't catch everything, but it shouldn't break anything either. 
-// Needless to say this is experimental. Please report issues @ github.com/ryanve/css3base/issues
-function css3base_compress ($css) {
-	if ( empty($css) || !is_string($css) ) { return false; }
+/**
+ * @param  string  $css
+ * @return string
+ */
+function compressCss($css) {
+	if ( !$css || !is_string($css))
+        return '';
 	$doc = array();
 	preg_match( '/\/\*![\s\S]+?\*\//', $css, $doc );  // `/*!` comments
 	$doc = isset($doc[0]) ? $doc[0] : ''; // the initial `/*!` docblock
@@ -39,19 +32,46 @@ function css3base_compress ($css) {
 	return trim($doc . "\n" . trim($css));
 }
 
-$output = array();
-
-foreach ( $build as &$n ) {
-	if ( empty($n) ) { continue; }
-	$n = $path . $n;
-	file_exists($n) || file_exists($n .= '.css') and $css = file_get_contents($n);
-	$css = css3base_compress($css);
-	$n = array_pop(explode('/', $n)); // get filename w/ extension but w/o preceding path
-	//empty($css) or $n = '/* ==start=> ' . $n . ' */' . "\n" . $css . "\n" . '/* <=end== ' . $n . ' */';
-	empty($css) or array_push($output, $css);
-	unset($css);
+/**
+ * @return object
+ */
+function getParams() {
+    $params = array();
+    parse_str($_SERVER['QUERY_STRING'], $params);
+    $params = (object) $params;
+    $params->mode = $params->mode ?: 'min';
+    $params->build = !$params->build || '_' === $params->build ? array(
+        'normalize'
+      , 'h5bp'
+      , 'fit'
+      , 'custom'
+    ) : array_unique(array_filter(explode( ',', $params->build )));
+    return $params;
 }
 
-$output = array_filter($output);
-echo $nfo . "\n\n" . implode("\n\n\n", $output) . "\n\n";
+/**
+ * @param   string      $file
+ * @param   string      $min
+ * @return  string|null
+ */
+function getFile($file, $mode = 'min') {
+    static $path;
+    $path = $path ?: (is_dir('css') ? 'css/' : rtrim(dirname(__DIR__), '/') . '/css/');
+    $file = $path . $file;
+    $css = file_exists($file) || file_exists($file .= '.css') ? file_get_contents($file) : null;
+    return $css && 'min' === $mode ? compressCss($css) : $css;
+}
 
+# generate the output:
+call_user_func(function() {
+    $params = getParams(); 
+    $nfo = '/* :::::::::::::::::: '
+        . "\n" . ' * @link  css3base.com/build/' . str_replace('.css', '', implode(',', $params->build))
+        . "\n" . ' * @date  ' . date('Y-m-d')
+        . "\n" . ' * ::::::::::::::::: */';
+    $output = array();
+    foreach ($params->build as $n)
+        $css = ($css = getFile($n, $params->mode)) ? array_push($output, $css) : null;
+    $output = array_filter($output);
+    echo $nfo . "\n\n" . implode("\n\n\n", $output) . "\n\n";
+});

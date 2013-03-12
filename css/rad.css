@@ -1,10 +1,10 @@
 /*!
  * rad.css | color scheme for code and beyond by @ryanve
- * @version  2012-09-21
+ * @version  2013-03-11
  * @link     css3base.com
- * @license  creativecommons.org/publicdomain/zero/1.0/
- * @example  <div class="rad"> for light background
- * @example  <div class="rad dark"> for dark background
+ * @license  CC0
+ * @example  <html class="rad">
+ * @example  <html class="rad dark">
  */
 
 /* Normalize <pre> and <code> ===================================== */

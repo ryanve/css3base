@@ -1,12 +1,12 @@
 /*!
- * solarized.css | implementation by @ryanve of @ethanschoonover's "Solarized" color scheme
- * @version  2012-09-21
- * @link     css3base.com (CC0 license)
- * @link     ethanschoonover.com/solarized (MIT license)
+ * solarized.css | @ryanve implementation of @ethanschoonover's "Solarized" color scheme
+ * @version  2013-03-11
+ * @link     css3base.com (CC0)
+ * @link     ethanschoonover.com/solarized (MIT)
  * @example  <html class="solarized">
  * @example  <html class="solarized dark">
  */
- 
+
 /* Normalize <pre> and <code> ============================================= */
 pre, code, .pre, .code { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
 pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }

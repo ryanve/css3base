@@ -41,7 +41,7 @@ function getParams() {
     $params->mode = $params->mode ?: 'min';
     $params->build = !$params->build || '_' === $params->build ? [
         'normalize', 'h5bp', 'fit', 'custom'
-    ] : array_unique(array_filter(explode(',', $params->build)));
+    ] : array_unique(array_filter(explode(',', preg_replace('#(\.\d+)?(\.css)?#', '', $params->build))));
     return $params;
 }
 
@@ -62,8 +62,7 @@ function getFile($file, $mode = 'min') {
 call_user_func(function() {
     $params = getParams(); 
     $nfo = '/* :::::::::::::::::: '
-        . "\n" . ' * @link  css3base.com/build/' 
-        . preg_replace('#(\.\d+)?\.css#', '', implode(',', $params->build))
+        . "\n" . ' * @link  css3base.com/build/' . implode(',', $params->build)
         . "\n" . ' * @date  ' . date('Y-m-d')
         . "\n" . ' * ::::::::::::::::: */';
     $output = [];

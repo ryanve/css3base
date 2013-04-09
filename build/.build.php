@@ -48,11 +48,11 @@ function getParams() {
 /**
  * @param   string      $file
  * @param   string      $min
- * @return  string|null
+ * @return  string|boolean
  */
-function getFile($file, $mode = 'min') {
+function getCss($file, $mode = 'min') {
     $file = (is_dir('css') ? '.' : '..') . '/css/' . $file;
-    $css = file_exists($file) || file_exists($file .= '.css') ? file_get_contents($file) : null;
+    $css = is_file($file) || is_file($file .= '.css') ? file_get_contents($file) : false;
     return $css && 'min' === $mode ? compressCss($css) : $css;
 }
 
@@ -65,7 +65,7 @@ call_user_func(function() {
         . "\n" . ' * ::::::::::::::::: */';
     $output = [];
     foreach ($params->build as $n)
-        $css = ($css = getFile($n, $params->mode)) ? array_push($output, $css) : null;
+        $css = ($css = getCss($n, $params->mode)) ? array_push($output, $css) : null;
     $output = array_filter($output);
     echo $nfo . "\n\n" . implode("\n\n\n", $output) . "\n\n";
 });

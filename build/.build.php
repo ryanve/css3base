@@ -51,9 +51,7 @@ function getParams() {
  * @return  string|null
  */
 function getFile($file, $mode = 'min') {
-    static $path;
-    $path = $path ?: (is_dir('css') ? 'css/' : rtrim(dirname(__DIR__), '/') . '/css/');
-    $file = $path . $file;
+    $file = (is_dir('css') ? '.' : '..') . '/css/' . $file;
     $css = file_exists($file) || file_exists($file .= '.css') ? file_get_contents($file) : null;
     return $css && 'min' === $mode ? compressCss($css) : $css;
 }

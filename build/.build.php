@@ -59,10 +59,10 @@ function getCss($file, $mode = 'min') {
 # generate the output:
 call_user_func(function() {
     $params = getParams(); 
-    $nfo = '/* :::::::::::::::::: '
-        . "\n" . ' * @link  css3base.com/build/' . implode(',', $params->build)
-        . "\n" . ' * @date  ' . date('Y-m-d')
-        . "\n" . ' * ::::::::::::::::: */';
+    $nfo = '/*!'
+        . "\n" . ' * @link css3base.com/build/' . implode(',', $params->build)
+        . "\n" . ' * @time ' . date(DATE_W3C)
+        . "\n" . ' */';
     $output = [];
     foreach ($params->build as $n)
         $css = ($css = getCss($n, $params->mode)) ? array_push($output, $css) : null;

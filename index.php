@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <!--[if lt IE 9]><html class="oldie ++ rad no-js custom"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="++ rad no-js custom"> <!--<![endif]-->
 <head>
@@ -148,46 +148,38 @@
     <script src="http://airve.github.com/js/elo/elo.min.js"></script>
     <script>
     (function ($, location) {
-
-        $ && $(function ($) {
-
+        $ && $(function($) {
             var dir = 'http://css3base.com/build/'
               , $inputs = $('input')
               , defaultBuildName = '_'
               , ymd = this.body.getAttribute('data-ymd')
               , ext = isFinite(ymd) ? '.' + ymd + '.css' : '';
 
-            $('.file').on('click', function () {
+            $('.file').on('click', function() {
                 // make it easier to check the checkboxes
                 var node = this;
-                while ( node = node.previousSibling ) {
-                    if ( 'INPUT' === node.tagName ) {
+                while (node = node.previousSibling) {
+                    if ('INPUT' === node.nodeName) {
                         node.checked = !node.checked;
                         break;
                     }
                 }
             });
-            
-            $('#build').on('click', function () {
-            
-                var files = '';
 
-                $inputs.each(function (el) {
+            $('#build').on('click', function() {
+                var files = '';
+                $inputs.each(function(el) {
                     var data;
-                    if ( el && el.checked ) {
-                        if ( data = el.getAttribute('data-file') ) {
+                    if (el && el.checked) {
+                        if (data = el.getAttribute('data-file')) {
                             files += (files ? ',' : '') + data;
                         }
                     }
                 });
-
                 files = files || defaultBuildName;
                 location.href = dir + files + ext; // it works with or w/o the extension
-
             });
-
         });
-
     }(this.elo, location));
     </script>
 <!--<![endif]-->

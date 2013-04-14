@@ -1,60 +1,49 @@
 /*!
  * fit.css   Base responsive styles for HTML5 elements.
  * @author   Ryan Van Etten <@ryanve>
- * @version  2012-10-24
+ * @version  2013.04.14
  * @link     css3base.com
  * @license  CC0
  */
 
-/*  Prevent horizontal scrollbar. If all the other styles 
- *  on the page are properly set in percentages, then you
- *  don't need this, but it acts as a nice catch. 
+/* Prevent horizontal scrollbar. If all the other styles 
+ * on the page are properly set in percentages, then you
+ * don't need this, but it acts as a nice catch. 
  */ 
 html { overflow-x:hidden }
 
-/*  Prepare body for fluid design, w/o forcing any particular measurements.
- *  This gives you a versatile default base that is easy to build on:
+/* Prepare body for fluid design, w/o forcing any particular measurements.
+ * This gives you a versatile default base that is easy to build on:
  */
 body {
-    margin: auto;
-    max-width: 100%; /* often cascaded to a pixel value */
+    margin:auto;
+    max-width:100%; /* often cascaded to px|em */
     overflow:hidden; /* prevent bit.ly/collapsing-margins */
-    word-wrap: break-word; /* allow text to wrap */
+    word-wrap:break-word; /* allow text to wrap */
 }
 
-/*  Responsive embedded media and form elements =====
- *  Don't use `height:auto` on iframe|object|embed due to vertical clipping.
- *  Add !important to the `max-width` and `height` directives as needed.
+/* Responsive embedded media and form elements
+ * Avoid `height:auto` on iframe|object|embed due to vertical clipping.
+ * Add !important to the `max-width` and `height` directives as needed.
  */
 img,audio,video,canvas,iframe,object,embed,input,textarea,progress,meter,datalist,output { max-width:100% }
-img,audio,video,canvas { height: auto }
+img,audio,video,canvas { height:auto }
 
-/*  IE8-specific hack to make `max-width:100%;height:auto` work. Only applies to IE8. IE7 is fine.
- *  It prevents img height from being distorted when shrunk (stackoverflow.com/a/8831173/770127) */
-@media \0screen { img { width: auto } }
+/* IE8-specific hack to make `max-width:100%;height:auto` work. Only applies to IE8. IE7 is fine.
+ * It prevents img height from being distorted when shrunk (stackoverflow.com/a/8831173/770127) */
+@media \0screen { img { width:auto }}
 
-/*  Keep media elems tight to their containing elems ( h5bp.com/i/440 ) */
+/* Keep media elems tight to their container (h5bp.com/i/440) */
 img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
 
-/*  Contain elems that have (CMS-generated) inline styles: */
-[style] { max-width: 100% }
+/* Contain elems that have (CMS-generated) inline styles: */
+[style] { max-width:100% }
 
-/*  Video helper classes based on bit.ly/ratios-for-video
- *  example usage:
-    <div class="rwd-wrap-4:3">
-        <iframe width="640" height="480" ...></iframe>
-    </div>
-    <div class="rwd-wrap-16:9">
-        <iframe width="1280" height="720" ...></iframe>
-    </div>
+/* Video helper classes based on bit.ly/ratios-for-video
+ * <div class="rwd-wrap-4:3"><iframe width="640" height="480" ...></iframe></div>
+ * <div class="rwd-wrap-16:9"><iframe width="1280" height="720" ...></iframe></div>
  */
-.rwd-wrap-16\:9,.rwd-wrap-4\:3 { position: relative }
-.rwd-wrap-16\:9  { padding: 56.25% 0 0 0 }
-.rwd-wrap-4\:3   { padding: 75% 0 0 0 }
-.rwd-wrap-16\:9>*,.rwd-wrap-4\:3>* { position: absolute; left: 0; top: 0; height: 100% }
-
-/*  Useful Links
- *  @link  css-tricks.com/rundown-of-handling-flexible-media/
- *  @link  bit.ly/5-responsive
- *  @link  stackoverflow.com/a/9807320/770127
- */
+.rwd-wrap-16\:9,.rwd-wrap-4\:3 { position:relative }
+.rwd-wrap-16\:9 { padding:56.25% 0 0 0 }
+.rwd-wrap-4\:3 { padding:75% 0 0 0 }
+.rwd-wrap-16\:9>*, .rwd-wrap-4\:3>* { position:absolute; left:0; top:0; height:100% }

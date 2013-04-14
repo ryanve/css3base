@@ -1,0 +1,32 @@
+/*!
+ * pop.css   
+ * @author   Ryan Van Etten <@ryanve>
+ * @version  
+ * @link     css3base.com
+ * @license  CC0
+ */
+
+/* Off-white is easier on the eyes */
+html { color:#344; background:#ffd; }
+.dark { color:#ffd; background:#4D5D53; }
+/*.dark { color:#bcc; background:#112; }*/
+
+/* All text is relative to this. */
+body { font-size:1.1em; line-height:1.6em; }
+
+img { vertical-align:middle; }
+img, a.block { border:0; }
+
+@media screen, projection, tv {
+    a { color:#518; border-bottom:1px dashed #ddb; text-decoration:none; }
+    a:hover { color:#427; border-bottom:1px dashed #409; }
+    .dark a { color:#fa0; border-bottom-color:#566; }
+    .dark a:hover { color:#ec0; border-bottom-color:#ddb; }
+    :not(code):not(small) a { font-weight:bold; }
+    a small { font-weight:normal; }
+    abbr[title] { border-bottom:1px dashed #ddb; }
+}
+
+@media (max-width:18em) {
+    body { font-size:1em; line-height:1.4em; }
+}

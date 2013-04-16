@@ -1,0 +1,13 @@
+/*!
+ * tracer.css  subtle transitions
+ * @author     Ryan Van Etten
+ * @version    2013.04.15
+ * @link       css3base.com
+ * @license    CC0
+ */
+
+/* airve.com/mq - css3please.com - stackoverflow.com/a/9670311/770127 */
+@media screen and (color) {
+    * { transition:background 0.1s ease-out, opacity 0.1s ease-out; }
+    a { transition:color 0.1s ease-out, border-color 0.1s ease-out; }
+}

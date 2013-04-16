@@ -1,31 +1,34 @@
 /*! 
- * helper.css  helper classes from @link h5bp.com 
+ * helper.css  h5bp.com helper classes
  * @link       css3base.com
- * @version    2012.12.14
+ * @version    2013.04.15
+ * @license    CC0
  */ 
-.ir {/* image replacement */
-    background-color:transparent; 
-    border:0; overflow:hidden; 
-    *text-indent:-9999px; /* IE6/7 */
+
+ /* bit.ly/ir-techniques */
+.ir { background-color:transparent; border:0; overflow:hidden; *text-indent:-9999px /* ie6/7 */}
+.ir:before { content:""; display:block; width:0; height:100% }
+
+/* hide from browsers and screenreaders */
+.hidden { display:none!important; visibility:hidden }
+
+/* hide visually and from screenreaders, but maintain layout */
+.invisible { visibility:hidden }
+
+/* hide visually, but not for screenreaders h5bp.com/v */
+.visuallyhidden {
+    clip:rect(0 0 0 0); overflow:hidden; position:absolute; 
+    width:1px; height:1px; border:0; margin:-1px; padding:0;
 }
-.ir:before {
-    content:""; display:block; width:0; height:100%; 
-}
-.hidden {/* h5bp.com/u */
-    display:none!important;
-    visibility:hidden;
-} 
-.visuallyhidden {/* h5bp.com/v */
-    clip:rect(0 0 0 0);width:1px;height:1px;
-    overflow:hidden;position:absolute;
-    border:0;margin:-1px;padding:0;
-}
+
+/* allow focus via keyboard navigation */
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip:auto;width:auto;height:auto;
-    overflow:visible;position:static;margin:0;
+    clip:auto; overflow:visible; position:static; 
+    width:auto; height:auto; margin:0;
 }
-.invisible { visibility:hidden; }
-.clearfix:before,.clearfix:after { content:" "; display:table; }
-.clearfix:after { clear:both; } 
-.clearfix { *zoom:1; } /* IE6/7 */
+
+/* contain floats - j.mp/eLdiEt */
+.clearfix:before,.clearfix:after { content:" "; display:table }
+.clearfix:after { clear:both }
+.clearfix {*zoom:1 } /* ie6/7 */

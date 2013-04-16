@@ -11,11 +11,10 @@
      
 /* Keep imgs tight to their container (h5bp.com/i/440) */
 img { vertical-align:middle }
-
 img, iframe { border:0 }
 
 /* Tame border w/o affecting other hr rules */
-hr { border-style:solid; border-color:#ccc }
+hr { border-bottom:0; border-left:0; border-right:0; }
 
 /* Re: bit.ly/css2sample and git.io/normalize  */
 fieldset { border:0; padding:0; margin-left:0; margin-right:0; }

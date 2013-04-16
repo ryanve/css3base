@@ -1,15 +1,17 @@
 /*!
- * cue.css   CSS suggestions for cue.js
- * @author   Ryan Van Etten <@ryanve>
- * @license  CC0
+ * cue.css   suggested styles for cue.js
  * @link     cuejs.com
+ * @link     css3base.com
+ * @version  2013.04.15
+ * @author   Ryan Van Etten
+ * @license  CC0
  */
 
 /* Fix videos that bounce vertically. */
-video { vertical-align: baseline }
+video { vertical-align:baseline }
 
 /* Responsiveness ( see: css3base.com/css/fit.css ) */
-audio, video { max-width: 100%; height: auto; }
+audio, video { max-width:100%; height:auto; }
 
 /* The controls have dynamic classes that give you a lot of CSS options. I recommend viewing 
    the DOM via the console while you interact with the controls to see the classes and attrs. */

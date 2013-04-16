@@ -1,28 +1,17 @@
 /*!
- * @link  css3base.com
- * combined via SSI includes (as seen in htaccess @link h5bp.com)
- * @link  bit.ly/apache-ssi
+ * example concatenation via SSI includes (see .htaccess in this dir)
+ * @link   github.com/ryanve/css3base/blob/master/css/
+ * @link   css3base.com
+ * @link   bit.ly/apache-ssi
  */
 
 /* ==start=> normalize.css */
 <!--#include file="normalize.css" -->
 /* <==end=== normalize.css */
 
-/* ==start=> h5bp.css */
-<!--#include file="h5bp.css" -->
-/* <==end=== h5bp.css */
-
 /* ==start=> responsive.css */
 <!--#include file="fit.css" -->
 /* <==end=== responsive.css */
-
-/* ==start=> plus.css */
-<!--#include file="plus.css" -->
-/* <==end=== plus.css */
-
-/* ==start=> solarized.css */
-<!--#include file="solarized.css" -->
-/* <==end=== solarized.css */
 
 /* ==start=> custom.css */
 <!--#include file="custom.css" -->

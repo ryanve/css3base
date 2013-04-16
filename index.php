@@ -16,7 +16,7 @@
     <meta name=description content="Modular css builder for base stylesheets.">
     <meta name=author content="Ryan Van Etten">
 
-    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,helper,print.20130120.css">
+    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,aid,print.20130415.css">
     <link rel=image_src href="http://css3base.com/apple-touch-icon.png"><!-- repurpose ios icon -->
 
     <style>
@@ -24,12 +24,12 @@
         body { max-width:1004px; width:98%; padding:0 1% }
         a { text-decoration:none }
         form ul { list-style-type:none; padding-left:0 }
-        form li { display:block; padding: 1em; color:#133; background:#bee }
+        form li { display:block; padding:1em; color:#133; background:#bee }
         form li:hover { background:#aee }
         form a, .custom form a { color:#409; font-weight:bold }
         form a:hover,.custom form a:hover { color:#e30 }
         form li+li { margin-top: 2px }
-        .file:hover { cursor:pointer }
+        .file:hover, .mode:hover { cursor:pointer }
         .no-js .file:hover,.oldie .file:hover { cursor:text }
         #build { padding:.3em 1em; font-weight:bold }
         @media all and (min-width:310px) {
@@ -72,47 +72,53 @@
     </noscript>
     
     <h2>
-        <span itemprop="name">css3base</span>: <span itemprop="description">modular css builder</span>
+        <span itemprop="name">css3base</span>: <span itemprop="description">modular <a href="/css">css</a> builder</span>
     </h2>
     
     <form class="++">
         <ul>
-            <li><input checked type=checkbox data-file="normalize"> <strong class="file" title="&radic;">normalize.css</strong> <small><span class=shape>&#9648;</span> The modern alternative to CSS resets by <a href="https://github.com/necolas/normalize.css">@necolas</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/normalize.css">raw</a></small>
+            <li><input checked type=checkbox data-file="normalize"> <strong class="file" title="&radic;">normalize.css</strong> <small><span class=shape>&#9648;</span> Modern CSS reset alternative by <a href="https://github.com/necolas/normalize.css">@necolas</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/normalize.css">raw</a></small>
 
-            <li><input type=checkbox data-file="h5bp"> <strong class="file" title="&radic;">h5bp.css</strong> <small><span class=shape>&#9648;</span> Defaults from the <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/h5bp.css">raw</a></small>
+            <li><input type=checkbox data-file="h5bp"> <strong class="file" title="&radic;">h5bp.css</strong> <small><span class=shape>&#9648;</span> <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">H5BP</a> <q>opinionated defaults</q> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/h5bp.css">raw</a></small>
 
-            <li><input checked type=checkbox data-file="fit"> <strong class="file" title="&radic;">fit.css</strong> <small><span class=shape>&#9648;</span> Base responsive styles for HTML5 elements by <a href="https://github.com/ryanve/css3base/blob/master/css/fit.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/fit.css">raw</a></small>
+            <li><input checked type=checkbox data-file="fit"> <strong class="file" title="&radic;">fit.css</strong> <small><span class=shape>&#9648;</span> Responsive base for HTML5 elements by <a href="https://github.com/ryanve/css3base/blob/master/css/fit.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/fit.css">raw</a></small>
 
             <li><input type=checkbox data-file="plus"> <strong class="file" title="&radic;">plus.css</strong> <small><span class=shape>&#9648;</span> Mobile-first <a href="http://en.wikipedia.org/wiki/Fibonacci_number" title="Wikipedia &raquo;">Fibonacci</a> text by <a href="https://github.com/ryanve/css3base/blob/master/css/plus.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/plus.css">raw</a></small>
 
             <!--<li><input type=checkbox data-file="rad"> <strong class="file"  title="&radic;">rad.css</strong> <small><span class=shape>&#9648;</span> 80s-inspired color scheme by <a href="https://github.com/ryanve/css3base/blob/master/css/rad.css">@ryanve</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/rad.css">raw</a></small>-->
 
-            <li><input type=checkbox data-file="solarized"> <strong class="file" title="&radic;">solarized.css</strong> <small><span class=shape>&#9648;</span> CSS for implementing <a href="http://ethanschoonover.com/solarized">Solarized</a> colors <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/solarized.css">raw</a></small>
+            <li><input type=checkbox data-file="solarized"> <strong class="file" title="&radic;">solarized.css</strong> <small><span class=shape>&#9648;</span> A <a href="http://ethanschoonover.com/solarized">Solarized</a> color scheme implementation <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/solarized.css">raw</a></small>
+            
+            <li><input checked type=checkbox data-file="aid"> <strong class="file" title="&radic;">aid.css</strong> <small><span class=shape>&#9648;</span> Assistive helpers based on <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">H5BP</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/aid.css">raw</a></small>
 
-            <li><input checked type=checkbox data-file="custom"> <strong class="file" title="&radic;">custom.css</strong> <small><span class=shape>&#9648;</span> A placeholder for your custom css. <span class=shape>&#9648;</span> <a href="http://css3base.com/css/custom.css">raw</a></small>
-
-            <li><input type=checkbox data-file="helper"> <strong class="file" title="&radic;">helper.css</strong> <small><span class=shape>&#9648;</span> Helper classes from the <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/helper.css">raw</a></small>
-
-            <li><input type=checkbox data-file="print"> <strong class="file" title="&radic;">print.css</strong> <small><span class=shape>&#9648;</span> Hybrid print styles adapted from <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">HTML5 Boilerplate (@h5bp)</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/print.css">raw</a></small>
+            <li><input type=checkbox data-file="helper"> <strong class="file" title="&radic;">helper.css</strong> <small><span class=shape>&#9648;</span> <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">H5BP</a> helper classes <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/helper.css">raw</a></small>
+            
+            <li><input type=checkbox data-file="tracer"> <strong class="file" title="&radic;">tracer.css</strong> <small><span class=shape>&#9648;</span> subtle transitions <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/tracer.css">raw</a></small>
+            
+            <li><input type=checkbox data-file="custom"> <strong class="file" title="&radic;">custom.css</strong> <small><span class=shape>&#9648;</span> A placeholder for your custom css. <span class=shape>&#9648;</span> <a href="http://css3base.com/css/custom.css">raw</a></small>
+            
+            <li><input checked type=checkbox data-file="print"> <strong class="file" title="&radic;">print.css</strong> <small><span class=shape>&#9648;</span> Hybrid print styles based on <a href="https://github.com/h5bp/html5-boilerplate/tree/master/css">H5BP</a> <span class=shape>&#9648;</span> <a class=raw href="http://css3base.com/css/print.css">raw</a></small>
+            
+            <li><input checked type=checkbox data-mode="min"> <span class="mode">compress</span>
         </ul>
         <a id="build" class="++" href="#build" accesskey=u>BUILD</a>
     </form>
     
     <footer id="footer">
         <nav>
-            <h3 class="visuallyhidden">Project Links</h3>
+            <h3 class="assistive">Project Links</h3>
             <ul>
                 <li><a href="#start" title="up" accesskey="a"><span class=shape>&#9650;</span></a>
                 <li><a href="http://twitter.com/ryanve" title="Twitter: @ryanve" itemprop="creator" accesskey=r>@ryanve</a>
                 <li><a href="http://css3base.com/css/" title="css index" accesskey=i><b>/css</b></a>
                 <li><a href="http://cdn.airve.com/logo/css3base/" title="logo index"><b>/logo</b></a></li>
                 <li><a href="https://github.com/ryanve/css3base" title="repo" accesskey=g>Github</a>
-                <li class="visuallyhidden"><a href="https://github.com/ryanve/css3base/issues" title="report an issue" accesskey=9>Issue?</a>
-                <li class="visuallyhidden"><a id="end" href="#end" title="down" accesskey=z><span class=shape>&#9660;</span></a>
+                <li><a href="https://github.com/ryanve/css3base/issues" title="report an issue" accesskey=9>/issues</a>
+                <li class="hidden"><a id="end" href="#end" title="down" accesskey=z><span class=shape>&#9660;</span></a>
             </ul>
         </nav>
         
-        <div class="hidden">
+        <div class="diagnostic">
             <h3>Testing</h3>
             <ul>
                 <!--<li><a accesskey=x href="http://validator.w3.org/check?uri=referer">validate</a>-->
@@ -153,9 +159,10 @@
               , $inputs = $('input')
               , defaultBuildName = '_'
               , ymd = this.body.getAttribute('data-ymd')
+              , mode = ''
               , ext = isFinite(ymd) ? '.' + ymd + '.css' : '';
 
-            $('.file').on('click', function() {
+            $('.file,.mode').on('click', function() {
                 // make it easier to check the checkboxes
                 var node = this;
                 while (node = node.previousSibling) {
@@ -170,14 +177,13 @@
                 var files = '';
                 $inputs.each(function(el) {
                     var data;
-                    if (el && el.checked) {
-                        if (data = el.getAttribute('data-file')) {
-                            files += (files ? ',' : '') + data;
-                        }
-                    }
+                    el && (el.checked 
+                        ? (data = el.getAttribute('data-file')) && (files += (files ? ',' : '') + data)
+                        : (data = el.getAttribute('data-mode')) && (mode = '&mode=dev')
+                    );
                 });
                 files = files || defaultBuildName;
-                location.href = dir + files + ext; // it works with or w/o the extension
+                location.href = dir + files + ext + mode; // it works with or w/o the extension
             });
         });
     }(this.elo, location));

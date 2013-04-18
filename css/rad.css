@@ -1,57 +1,36 @@
 /*!
- * rad.css | color scheme for code and beyond by @ryanve
- * @version  2013.03.11
+ * rad.css   color scheme for code and beyond by @ryanve
+ * @version  2013.04.17
  * @link     css3base.com
  * @license  CC0
  * @example  <html class="rad">
  * @example  <html class="rad dark">
  */
-
-/* Normalize <pre> and <code> ===================================== */
-pre, code, .pre, .code { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
-pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
  
-/* Selected Text (these must be declared separately) ============== */
-::-moz-selection { background:#f13;color:#133;text-shadow:none }
-     ::selection { background:#8d2;color:#133;text-shadow:none }
-/*
-::-moz-selection{background:#b3d4fc;color:inherit;text-shadow:none}
-::selection{background:#b3d4fc;color:#222;text-shadow:none}
-*/
+/* Selected Text */
+::-moz-selection { background:#f13; color:#133 }
+     ::selection { background:#8d2; color:#133 }
 
-/* Default Colors ================================================= */
-/* Make `.rad .rad` light for proper inversing. */
+/* Default Colors */
 .rad,.rad .rad { color:#225; background:#ffd } /* 225 | eec dee 997 ffd */
 .rad.dark { color:#dee; background:#408 } /* 135 225 a08 808 308 408 */
 /* .rad.ice { color:#133; background:#dee }
 .rad.haze { color:#234; background:#cca }
 .rad.street { color:#aa9; background:#333 } */
 
-/* No italics for these. ========================================== */
-.rad mark,.rad pre var, .pre var, pre.rad var, .rad code var { font-style:normal }
-.rad pre em, .pre em, pre.rad em, .rad code em { font-style:normal; font-weight:bold }
-
-/* Emphasized/un-emphasized Colors =============================== */
-.rad small,.rad .rad small,.rad.dark em, .rad.dark strong {}
-.rad em, .rad .rad em, .rad strong,.rad .rad strong, .rad.dark small {}
-.rad pre small, .pre small, pre.rad small, .rad code small {
-    font-size:inherit;*font-size:100% /* IE7- can't inherit so give it 100% */
-}
-
-/* Background Highlights (base2/base02) =========================== */
+/* Background Highlights */
 .rad mark { color:#628 } /* IE7- */
 .rad mark { color:inherit } /* modern browsers */
 .rad mark, .rad .rad mark { background:#244 }
-.rad mark { background:#c95}
+.rad mark { background:#c95 }
 .rad.dark mark { background:#628 }
 
-/* Link Colors ==================================================== */
+/* Link Colors */
 .rad a,.rad .rad a { color:#628 }
 .rad.dark a { color:#fa0 }
 .rad a:hover { color:#2da }
 
-/* Code Colors =========================================================== */
-.rad .keyword,.rad .boolean { font-weight:bold }
+/* Code Colors */
 .rad \@tag { color:#09b }  /* usage: <span class="@tag">@param</span> */
 .rad .operator { color:#8d2 }
 .rad .keyword { color:#628 }

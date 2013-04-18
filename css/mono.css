@@ -1,12 +1,13 @@
 /*!
- * mono.css  subjective base styles for code elements
- * @version  2013.01.04
+ * mono.css  base styles for code
+ * @version  2013.04.17
  * @link     css3base.com
  * @license  CC0
  */
 
-pre, .pre, code, kbd { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
-pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
-pre a, .pre a { font-weight:inherit; }
-code small { font-size:inherit; }
-a dfn, strong dfn, em dfn, code var, code mark, code var { font-style:inherit; }
+pre, code, kbd { -moz-tab-size:4; -o-tab-size:4; tab-size:4 }
+pre { white-space:pre-wrap; word-wrap:break-word; overflow:auto }
+pre a { font-weight:inherit }
+a dfn, strong dfn, em dfn, code var, code mark, code var { font-style:inherit }
+pre small, code small { font-size:inherit; *font-size:100% /* IE7- */ }
+code .keyword, code .boolean { font-weight:bold }

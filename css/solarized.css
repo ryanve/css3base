@@ -1,59 +1,46 @@
 /*!
- * solarized.css | @ryanve implementation of @ethanschoonover's "Solarized" color scheme
- * @version  2013.03.11
- * @link     css3base.com (CC0)
- * @link     ethanschoonover.com/solarized (MIT)
- * @example  <html class="solarized">
- * @example  <html class="solarized dark">
+ * solarized.css  @ryanve implementation of ethanschoonover.com/solarized
+ * @version       2013.04.17
+ * @link          css3base.com
+ * @license       MIT
+ * @example       <html class="solarized">
+ * @example       <html class="solarized dark">
  */
 
-/* Normalize <pre> and <code> ============================================= */
-pre, code, .pre, .code { -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; }
-pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
+/* Selected Text */ 
+::-moz-selection { background:#2aa198; color:#002b36 }
+     ::selection { background:#2aa198; color:#002b36 }
 
-/* Selected Text ===== these combos seem to work well for solarized =======
-   === FF renders the colors exactly - other browsers may not ============= */ 
-::-moz-selection { background:#2aa198; color:#002b36; text-shadow:none }
-     ::selection { background:#2aa198; color:#002b36; text-shadow:none }
-
-/* Default Colors ========================================================= */
-/* Make `.solarized .solarized` light for proper inversing. */
-.solarized,.solarized .solarized { color:#839496; background:#fdf6e3 }
+/* Default Colors */
+.solarized, .solarized .solarized { color:#839496; background:#fdf6e3 }
 .solarized.dark { color:#657b83; background:#002b36 }
 
-/* No italics for these. ================================================== */
-.solarized pre em, .pre em, pre.solarized em, .solarized code em, 
-.solarized pre var, .pre var, pre.solarized var, .solarized code var, 
-.solarized mark { font-style:normal }
-
-/* Emphasized/un-emphasized Colors (base1/base01) ========================= */
+/* Emphasized/un-emphasized Colors (base1/base01) */
 .solarized small,.solarized .solarized small, 
 .solarized.dark em, .solarized.dark strong { color:#93a1a1 }
 .solarized em, .solarized .solarized em, .solarized strong, 
 .solarized .solarized strong, .solarized.dark small { color:#586e75 }
-.solarized pre small, .pre small, pre.solarized small, .solarized code small {
-    font-size:inherit;*font-size:100% /* IE7- can't inherit so give it 100% */
-}
 
-/* Background Highlights (base2/base02) =================================== */
+/* Background Highlights (base2/base02) */
 .solarized mark { color:#657b83 } /* base00 for IE7- */
 .solarized mark { color:inherit } /* modern browsers */
 .solarized mark, .solarized .solarized mark { background:#eee8d5 }
 .solarized.dark mark { background:#073642 }
 .solarized.dark mark ::-moz-selection { background:#002b36 }
 
-/* Link Colors ============================================================ */
+/* Link Colors */
 .solarized a { color:#268bd2 }
-.solarized a:hover { color:#cb4b16 }
+.solarized a:focus { color:#cb4b16 }
+.solarized a:hover { color:#6c71c4 }
 
-/* Code Styles ============================================================ */
-.solarized .keyword { font-weight:bold; color:#d33682 }
-.solarized .boolean { font-weight:bold; color:#b58900 }
+/* Code Styles */
+.solarized .keyword { color:#d33682 }
+.solarized .boolean { color:#b58900 }
 .solarized .number  { color:#dc322f }
 .solarized .string  { color:#2aa198 }
 .solarized .regex   { color:#6c71c4 }
 
-/* Accent Colors ========================================================== */
+/* Accent Colors */
 .solarized .yellow  { color:#b58900 }
 .solarized .orange { color:#cb4b16 }
 .solarized .red { color:#dc322f }
@@ -63,7 +50,7 @@ pre, .pre { white-space:pre-wrap; word-wrap:break-word; overflow: auto; }
 .solarized .cyan { color:#2aa198 }
 .solarized .green { color:#859900 }
 
-/* Unofficial extra accents based on the same wheel axis ================= */
+/* Unofficial extra accents */
 .solarized .sand  { color:#d38736 }
 .solarized .lime  { color:#95cb16 }
 .solarized .crimson { color:#991400 }

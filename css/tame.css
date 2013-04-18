@@ -1,9 +1,9 @@
 /*! 
- * tame.css 
- * @version 2013.04.16 
- * @author  Ryan Van Etten
- * @link    css3base.com
- * @license CC0
+ * tame.css
+ * @version  2013.04.17
+ * @author   Ryan Van Etten
+ * @link     css3base.com
+ * @license  CC0
  */
 
 ::-moz-selection { text-shadow:none }
@@ -11,13 +11,18 @@
      
 /* Keep imgs tight to their container (h5bp.com/i/440) */
 img { vertical-align:middle }
+
+/* Kill borders */
 img, iframe { border:0 }
 
-/* Tame border w/o affecting other hr rules */
-hr { border-bottom:0; border-left:0; border-right:0; }
+/* Subdue background-color issues (airve.com/demo/opacity-background) */
+a { display:inline-block }
+
+/* Unobtrusively tame borders (bit.ly/hr-customization) */
+hr { border-bottom:0; border-left:0; border-right:0 }
 
 /* Re: bit.ly/css2sample and git.io/normalize  */
-fieldset { border:0; padding:0; margin-left:0; margin-right:0; }
+fieldset { border:0; padding:0; margin-left:0; margin-right:0 }
 
 /* Void underlines added via visual editor misuse. */
 span[style] { text-decoration:none!important }

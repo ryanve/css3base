@@ -24,5 +24,9 @@ hr { border-bottom:0; border-left:0; border-right:0 }
 /* Re: bit.ly/css2sample and git.io/normalize  */
 fieldset { border:0; padding:0; margin-left:0; margin-right:0 }
 
-/* Void underlines added via visual editor misuse. */
+/* Reset unarticulates' decoration to distinguish from anchors. */
+u { text-decoration:none }
+a u { text-decoration:inherit }
+
+/* Void underlines added by visual editor misuse. */
 span[style] { text-decoration:none!important }

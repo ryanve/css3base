@@ -1,9 +1,9 @@
-/*! 
- * helper.css  h5bp.com helper classes
- * @link       css3base.com
- * @version    2013.04.15
- * @license    CC0
- */ 
+/*!
+ * helper.css  culled h5bp.com helpers
+ * @version    2013.04.24
+ * @link       github.com/ryanve/css3base
+ * @license    MIT
+ */
 
  /* bit.ly/ir-techniques */
 .ir { background-color:transparent; border:0; overflow:hidden; *text-indent:-9999px /* ie6/7 */}

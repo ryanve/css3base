@@ -1,23 +1,23 @@
 /*!
  * plus.css  mobile-first Fibonacci text
  * @author   Ryan Van Etten
- * @version  2013.04.15
- * @link     css3base.com
- * @license  CC0
+ * @version  2013.04.24
+ * @link     github.com/ryanve/css3base
+ * @license  MIT
  */
 
-body { line-height:1.4;font-size:1em }
+body { font-size:1em; line-height:1.618 }
 dd+dt { margin-top:inherit }
-h1,.h1,h2,.h2 { margin-top:.618em; margin-bottom:.618em }
-h3,h4,h5,h6,.h3,.h4,.h5,.h6 { margin-top:1.146em; margin-bottom:1em }
+h1,h2 { margin:.618em 0; line-height:1.236 }
+h3,h4,h5,h6 { margin-top:1.146em; margin-bottom:1em }
 hgroup > * { margin-top:8px; margin-bottom:8px }
 
-h1,.h1 { font-size:1.618em }
-h2,.h2 { font-size:1.382em }
-h3,.h3 { font-size:1.146em }
-h4,.h4 { font-size:1em }
-h5,.h5 { font-size:.944em }
-h6,.h6 { font-size:.854em }
+h1 { font-size:1.618em }
+h2 { font-size:1.382em }
+h3 { font-size:1.146em }
+h4 { font-size:1em }
+h5 { font-size:.944em }
+h6 { font-size:.854em }
 
 /*  ========================================================
     size bumps:
@@ -37,7 +37,7 @@ h6,.h6 { font-size:.854em }
 }
 
 @media (min-width:30em) {
-    h1,.h1 { font-size:2em }
-    h2,.h2 { font-size:1.5em }
-    h3,.h3 { font-size:1.236em }
+    h1 { font-size:2em }
+    h2 { font-size:1.5em }
+    h3 { font-size:1.236em }
 }

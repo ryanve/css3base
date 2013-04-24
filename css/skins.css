@@ -1,0 +1,29 @@
+/*!
+ * skins.css
+ * @version  2013.04.24
+ * @link     github.com/ryanve/css3base
+ * @license  MIT
+ */
+
+@media screen and (color) {
+
+    /* links based on the Munsell color system */
+    .skin-basic, .skin-ocean { background:#fffddd; color:#222 }
+    .skin-basic a { color:#0093af; } .skin-basic a:hover { color:#7d00f8; }
+    .skin-ocean a { color:#006ebf; } .skin-ocean a:hover { color:#006ebf; }
+
+    /* en.wikipedia.org/wiki/Shades_of_white */
+    .skin-snow { background:#fffafa; color:#222 }
+    .skin-snow a { color:#7d00f8 }
+    .skin-snow a:hover { color:#d00081; }
+
+    .skin-dark { background:#000; color:#ccc }
+    .skin-dark a { color:#00a59c }
+    .skin-dark a:hover { color:#f2ab00 }
+    
+    .void-color a { color:#111; }
+    .void-color.skin-dark a { color:#eee; }
+    .void-color a:focus { color:#666; }
+    .void-color a:hover { color:#fffddd; background:#111; border-color:#111; }
+    .void-color.skin-dark a:hover { color:#111; background:#eee; border-color:#eee; }
+} 

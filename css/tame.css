@@ -1,9 +1,8 @@
-/*! 
+/*!
  * tame.css  mild unobtrusive resets
- * @version  2013.04.23
- * @author   Ryan Van Etten
- * @link     css3base.com
- * @license  CC0
+ * @version  2013.04.24
+ * @link     github.com/ryanve/css3base
+ * @license  MIT
  */
 
 ::-moz-selection { text-shadow:none }

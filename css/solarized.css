@@ -1,13 +1,10 @@
 /*!
  * solarized.css  @ryanve implementation of ethanschoonover.com/solarized
- * @version       2013.04.17
- * @link          css3base.com
+ * @version       2013.04.24
+ * @link          github.com/ryanve/css3base
  * @license       MIT
- * @example       <html class="solarized">
- * @example       <html class="solarized dark">
  */
 
-/* Selected Text */ 
 ::-moz-selection { background:#2aa198; color:#002b36 }
      ::selection { background:#2aa198; color:#002b36 }
 

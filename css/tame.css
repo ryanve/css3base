@@ -1,5 +1,5 @@
 /*! 
- * tame.css
+ * tame.css  Mild unobtrusive resets.
  * @version  2013.04.23
  * @author   Ryan Van Etten
  * @link     css3base.com
@@ -9,7 +9,7 @@
 ::-moz-selection { text-shadow:none }
      ::selection { text-shadow:none }
      
-/* Keep imgs tight to their container (h5bp.com/i/440) */
+/* Keep img tight to its container (h5bp.com/i/440) */
 img { vertical-align:middle }
 
 /* Kill borders */

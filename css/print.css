@@ -1,6 +1,6 @@
 /*! 
  * print.css  adapted h5bp.com print styles
- * @version   2013.04.24
+ * @version   2013.04.25
  * @link      github.com/ryanve/css3base
  * @license   MIT
  */
@@ -11,11 +11,13 @@
     box-shadow:none !important; text-shadow:none !important;
     filter:none !important; -ms-filter:none !important;
   }
-  a[href].print-href, 
-  .print-href a[href]:not(:empty):not(.ir):not([href^="#"]):not([href^="javascript:"]):after {
+
+  [href].print-href:after, 
+  .print-href a[href]:not(:empty):not([href^="#"]):after {
     content:" (" attr(href) ")"; 
     font-weight:normal; 
   }
+  
   thead { display:table-header-group } /* h5bp.com/t */
   audio,video,img,pre,tr,blockquote { page-break-inside:avoid }
   audio,video,img { max-width:100% !important }

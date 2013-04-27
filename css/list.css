@@ -11,9 +11,8 @@
 .pairs > dt:last-child { float:none } /* clearfix dl's that end with dt */
 
 /* inline dl (.serial combines well with .pairs) */
-.serial > dt { display:inline-block; float:none; margin:0 }
-.serial > dd { display:inline-block; margin:0 1em 0 0 }
-.serial > dd:last-child { margin-right:0 }
+.serial > dt, .serial > dd { display:inline-block; float:none; margin:0 }
+.serial > dd + dt { margin-left:1em }
 
 /* dl key/value separator */
 .pairs > dt:after, .serial > dt:after { content:":"; margin-right:.5em; font-weight:600; }

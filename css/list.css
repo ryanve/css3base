@@ -12,7 +12,8 @@
 
 /* inline dl (.serial combines well with .pairs) */
 .serial > dt, .serial > dd { display:inline-block; float:none; margin:0 }
-.serial > dd + dt { margin-left:1em }
+.serial > dd { margin-right:1em }
+.serial > dd:last-child { margin-right:0 }
 
 /* dl key/value separator */
 .pairs > dt:after, .serial > dt:after { content:":"; margin-right:.5em; font-weight:600; }

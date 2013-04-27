@@ -1,0 +1,25 @@
+/*!
+ * list.css  ol|ul|dl helpers
+ * @version  2013.04.26
+ * @link     github.com/ryanve/css3base
+ * @license  MIT
+ */
+
+ /* horizontally aligns dd next to dt */
+.pairs > dt { font-weight:600; display:block; float:left; clear:left }
+.pairs > dd { font-weight:400; display:block }
+.pairs > dt:last-child { float:none } /* clearfix dl's that end with dt */
+
+/* dl.inline or dl.inline.pairs */
+.inline > dt, .inline > dd { display:inline-block; float:none; margin-left:0 }
+.inline > dd { margin-right:1em }
+.inline > dd:last-child { margin-right:0 }
+
+/* dt/dd separator */
+.pairs > dt:after, 
+.inline > dt:after { content:":"; margin-right:.5em; font-weight:600; }
+
+/* .serial makes ul|ol inline and separates with commas */
+ul.serial, ol.serial { display:inline; padding-left:0 }
+.serial > li { display:inline; margin:0 }
+.serial > li + li:before { content: ", " }

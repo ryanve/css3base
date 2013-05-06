@@ -1,24 +1,24 @@
 /*!
  * tame.css  mild unobtrusive resets
- * @version  2013.04.24
+ * @version  2013.05.05
  * @link     github.com/ryanve/css3base
  * @license  MIT
  */
 
 ::-moz-selection { text-shadow:none }
      ::selection { text-shadow:none }
-     
+
+a {
+    display:inline-block; /* Subdue background-color issues - airve.com/demo/opacity-background */
+    max-width:100%; /* Prevent inline-block anchors from breaking responsiveness. */
+}
+
 /* Keep img tight to its container (h5bp.com/i/440) */
 img { vertical-align:middle }
 
-/* Kill borders */
-img, iframe { border:0 }
-
-/* Subdue background-color issues (airve.com/demo/opacity-background) */
-a { display:inline-block }
-
 /* Unobtrusively tame borders (bit.ly/hr-customization) */
 hr { border-bottom:0; border-left:0; border-right:0 }
+img, iframe { border:0 }
 
 /* Re: bit.ly/css2sample and git.io/normalize  */
 fieldset { border:0; padding:0; margin-left:0; margin-right:0 }

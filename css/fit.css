@@ -1,33 +1,42 @@
 /*!
  * fit.css   base responsive styles
- * @version  2013.05.05
+ * @version  2013.05.06
  * @link     github.com/ryanve/fit
  * @license  MIT
  */
 
-/* Prepare =body for fluid design, but force no measurements. */ 
+/* Prepare =body for fluid design. */ 
 body {
-    margin: auto;
+    margin: auto;          /* horizontal centering */
     max-width: 100%;       /* often cascaded to em|px */
     overflow: hidden;      /* avoid bit.ly/collapsing-margins */
     word-wrap: break-word; /* allow text to wrap */
 }
 
-/* Keep =media elems tight to their container (h5bp.com/i/440) */
-img,audio,video,canvas,iframe,object,embed { vertical-align:middle }
+/* Keep =media flush to its container (h5bp.com/i/440) */
+img, audio, video, canvas, iframe, object, embed {
+    vertical-align:middle 
+}
 
-/* Responsive =media and =form elems - use !important as needed */ 
+/* 
+ * =media and =form responsiveness
+ * Avoid height:auto on iframe|object|embed due to clipping. 
+ * Void inline styles via !important if needed. 
+ */
+[style],
+iframe, object, embed,
+input, textarea, progress, meter, datalist, output,
+img, audio, video, canvas { max-width:100% }
 img, audio, video, canvas { height:auto }
-img, audio, video, canvas,  
-iframe, object, embed,  /* << No height:auto due to clipping */
-input, textarea, progress, meter, datalist, output { max-width:100% }
 
-/* IE8-specific hack to make max-width:100%;height:auto work. Only applies to IE8. IE7 is fine.
- * It prevents img[height] from being distorted when shrunk (stackoverflow.com/a/8831173/770127) */ 
-@media \0screen { img { width:auto }}
-
-/* Contain elems that have (CMS-generated) inline styles */
-[style] { max-width:100% }
+/* 
+ * Prevent IE8 height distortion. IE7 is fine. 
+ * stackoverflow.com/a/8831173/770127 
+ * browserhacks.com/#ie 
+ */
+@media \0screen { 
+    img { width:auto }
+}
 
 /* Prevent uncontained dimensions from inducing scrollbar. */
 .xconfine { overflow-x:hidden }
@@ -36,7 +45,7 @@ input, textarea, progress, meter, datalist, output { max-width:100% }
 /* 
  * Maintain YouTube/Vimeo (iframe|object|embed) aspect ratio
  * github.com/ryanve/fit/issues/1
- * <div data-fit-ratio="16:9"><iframe src="..." width="640" height="360"></iframe></div>
+ * <div data-fit-ratio="16:9"><iframe src width="640" height="360"></iframe></div>
  */ 
 [data-fit-ratio] { position:relative; }
 [data-fit-ratio="4:3"] { padding: 75% 0 0 0; }

@@ -1,6 +1,6 @@
 /*!
  * fit.css   base responsive styles
- * @version  2013.05.06
+ * @version  2013.05.08
  * @link     github.com/ryanve/fit
  * @license  MIT
  */
@@ -9,7 +9,6 @@
 body {
     margin: auto;          /* horizontal centering */
     max-width: 100%;       /* often cascaded to em|px */
-    overflow: hidden;      /* avoid bit.ly/collapsing-margins */
     word-wrap: break-word; /* allow text to wrap */
 }
 

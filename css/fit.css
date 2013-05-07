@@ -1,12 +1,9 @@
 /*!
  * fit.css   base responsive styles
- * @version  2013.04.30
+ * @version  2013.05.05
  * @link     github.com/ryanve/fit
  * @license  MIT
  */
-
-/* Prevent scrollbar caused by "uncaught" non-relative widths. */
-html { overflow-x:hidden }
 
 /* Prepare =body for fluid design, but force no measurements. */ 
 body {
@@ -32,8 +29,12 @@ input, textarea, progress, meter, datalist, output { max-width:100% }
 /* Contain elems that have (CMS-generated) inline styles */
 [style] { max-width:100% }
 
+/* Prevent uncontained dimensions from inducing scrollbar. */
+.xconfine { overflow-x:hidden }
+.yconfine { overflow-y:hidden }
+
 /* 
- * =helper for maintaining YouTube/Vimeo iframe aspect ratio
+ * Maintain YouTube/Vimeo (iframe|object|embed) aspect ratio
  * github.com/ryanve/fit/issues/1
  * <div data-fit-ratio="16:9"><iframe src="..." width="640" height="360"></iframe></div>
  */ 

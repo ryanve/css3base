@@ -16,12 +16,12 @@
     <meta name=description content="Modular css builder for base stylesheets.">
     <meta name=author content="Ryan Van Etten">
 
-    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,plus,rad,aid,print.20130415.css">
+    <link rel=stylesheet href="http://css3base.com/build/normalize,fit,tame,plus,rad,aid,print.20130418.css">
     <link rel=image_src href="http://css3base.com/apple-touch-icon.png"><!-- repurpose ios icon -->
 
     <style>
         /* The purpose of the `.custom` class is to override specificity from base sheets. */
-        body { max-width:1004px; width:98%; padding:0 1% }
+        body { max-width:1004px; width:98%; }
         a { text-decoration:none }
         form ul { list-style-type:none; padding-left:0 }
         form li { display:block; padding:1em; color:#133; background:#bee }
@@ -40,12 +40,13 @@
         #build:hover,.custom #build:hover { background: #fa0; color:#409; }
         #footer{ margin:2em 0;border-bottom:1em solid #ffe }
         nav ul { padding:0 }
-        nav ul li{display:block;float:left;margin:0 0 1em}
-        nav ul li a{ padding:.5em; background:#ed3; color:#409 !important; margin:0 1px 1em 0 }
+        nav ul li { display:block; float:left; margin:0 0 1em }
+        nav ul li a { padding:.5em; background:#ed3; color:#409 !important; margin:0 1px 1em 0 }
         nav ul li a:hover{ background:#fa0 }
         .chromeframe { padding: 1em }
         .chromeframe a { border-bottom: 1px solid #bee }
         .oldie #build, .oldie input, .oldie .raw { display:none }
+        /* #header, body { margin:1em 0 } to test margin collapsing fix */
     </style>
     
     <script src="http://airve.github.com/js/modernizr/modernizr_shiv.min.js"></script>

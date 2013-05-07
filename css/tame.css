@@ -1,6 +1,6 @@
 /*!
  * tame.css  mild unobtrusive resets
- * @version  2013.05.05
+ * @version  2013.05.06
  * @link     github.com/ryanve/css3base
  * @license  MIT
  */
@@ -13,7 +13,7 @@ a {
     max-width:100%; /* Prevent inline-block anchors from breaking responsiveness. */
 }
 
-/* Keep img tight to its container (h5bp.com/i/440) */
+/* Keep img flush to its container (h5bp.com/i/440) */
 img { vertical-align:middle }
 
 /* Unobtrusively tame borders (bit.ly/hr-customization) */
@@ -29,3 +29,8 @@ a u { text-decoration:inherit }
 
 /* Void underlines added by visual editor misuse. */
 span[style] { text-decoration:none!important }
+
+/* j.mp/eLdiEt and prevent body bit.ly/collapsing-margins */
+body:before, body:after,
+.clearfix:before, .clearfix:after { content:" "; display:table }
+.clearfix:after { clear:both }

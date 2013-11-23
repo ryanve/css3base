@@ -1,6 +1,6 @@
 /*!
  * fit.css   base responsive styles
- * @version  2013.05.08
+ * @version  2013.11.22
  * @link     github.com/ryanve/fit
  * @license  MIT
  */
@@ -17,12 +17,12 @@ img, audio, video, canvas, iframe, object, embed {
     vertical-align:middle 
 }
 
-/* 
+/*
  * =media and =form responsiveness
  * Avoid height:auto on iframe|object|embed due to clipping. 
  * Void inline styles via !important if needed. 
  */
-[style],
+[style*="width:"],
 iframe, object, embed,
 input, textarea, progress, meter, datalist, output,
 img, audio, video, canvas { max-width:100% }

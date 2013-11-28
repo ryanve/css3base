@@ -1,6 +1,6 @@
 /*!
  * list.css  ol|ul|dl helpers
- * @version  2013.04.27
+ * @version  2013.11.28
  * @link     github.com/ryanve/css3base
  * @license  MIT
  */
@@ -20,5 +20,5 @@
 
 /* inline and delimit tokens */
 ul.serial, ol.serial { display:inline; padding:0 }
-.serial > li { display:inline; margin:0 }
-.serial > li + li:before { content: ", " } /* default delimiter */
+.serial > li { display:inline-block; margin:0 }
+.serial > li + li:before { display:inline; content:", " } /* delimiter */

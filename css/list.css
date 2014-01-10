@@ -1,24 +1,26 @@
 /*!
- * list.css  ol|ul|dl helpers
- * @version  2013.11.28
- * @link     github.com/ryanve/css3base
- * @license  MIT
+ * list.css ol|ul|dl helpers
+ * @version 2014.01.10
+ * @link http://github.com/ryanve/css3base
+ * @license MIT
  */
 
  /* horizontally align dd next to dt */
-.pairs > dt { font-weight:600; display:block; float:left; clear:left }
+.pairs > dt { font-weight:700; display:block; float:left; clear:left }
 .pairs > dd { font-weight:400; display:block }
 .pairs > dt:last-child { float:none } /* clearfix dl's that end with dt */
 
-/* inline dl (.serial combines well with .pairs) */
-.serial > dt, .serial > dd { display:inline-block; float:none; margin:0 }
+/* inline dl */
+.serial > dt,
+.serial > dd { display:inline-block; float:none; margin:0 }
 .serial > dd { margin-right:1em }
 .serial > dd:last-child { margin-right:0 }
 
-/* dl key/value separator */
-.pairs > dt:after, .serial > dt:after { content:":"; margin-right:.5em; font-weight:600; }
+/* key/value separator */
+.pairs > dt:after,
+.serial > dt:after { content:":"; margin-right:.5em; font-weight:700; }
 
-/* inline and delimit tokens */
+/* delimit and inline tokens */
 ul.serial, ol.serial { display:inline; padding:0 }
 .serial > li { display:inline-block; margin:0 }
-.serial > li + li:before { display:inline; content:", " } /* delimiter */
+.serial > li + li:before { display:inline; content:", " }

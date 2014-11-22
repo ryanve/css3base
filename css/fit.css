@@ -1,21 +1,15 @@
 /*!
- * fit.css   base responsive styles
- * @version  2013.11.22
- * @link     github.com/ryanve/fit
- * @license  MIT
+ * fit.css base responsive styles
+ * @version 2014.11.22
+ * @link http://github.com/ryanve/fit
+ * @license MIT
  */
 
-/* Prepare =body for fluid design. */ 
-body {
-    margin: auto;          /* horizontal centering */
-    max-width: 100%;       /* often cascaded to em|px */
-    word-wrap: break-word; /* allow text to wrap */
-}
+/* Allow text to wrap */
+body { word-wrap:break-word }
 
 /* Keep =media flush to its container (h5bp.com/i/440) */
-img, audio, video, canvas, iframe, object, embed {
-    vertical-align:middle 
-}
+img, audio, video, canvas, iframe, object, embed { vertical-align:middle }
 
 /*
  * =media and =form responsiveness
@@ -23,18 +17,16 @@ img, audio, video, canvas, iframe, object, embed {
  * Void inline styles via !important if needed. 
  */
 [style*="width:"],
-iframe, object, embed,
-input, textarea, progress, meter, datalist, output,
-img, audio, video, canvas { max-width:100% }
-img, audio, video, canvas { height:auto }
+iframe, object, embed, input, textarea, progress, meter, datalist, output { max-width:100% }
+img, audio, video, canvas { max-width:100%; height:auto }
 
 /* 
- * Prevent IE8 height distortion. IE7 is fine. 
- * stackoverflow.com/a/8831173/770127 
- * browserhacks.com/#ie 
+ * Prevent IE8 height distortion.
+ * http://stackoverflow.com/a/8831173/770127 
+ * http://browserhacks.com/#ie 
  */
-@media \0screen { 
-    img { width:auto }
+@media \0screen {
+  img { width:auto }
 }
 
 /* Prevent uncontained dimensions from inducing scrollbar. */
@@ -42,14 +34,11 @@ img, audio, video, canvas { height:auto }
 .yconfine { overflow-y:hidden }
 
 /* 
- * Maintain YouTube/Vimeo (iframe|object|embed) aspect ratio
- * github.com/ryanve/fit/issues/1
+ * Maintain YouTube/Vimeo iframe|object|embed aspect ratio
+ * http://github.com/ryanve/fit/issues/1
  * <div data-fit-ratio="16:9"><iframe src width="640" height="360"></iframe></div>
  */ 
-[data-fit-ratio] { position:relative; }
-[data-fit-ratio="4:3"] { padding: 75% 0 0 0; }
-[data-fit-ratio="16:9"] { padding: 56.25% 0 0 0; }
-[data-fit-ratio] * {
-    position:absolute; left:0; top:0;
-    height:100%; margin:0; padding:0; border:0; 
-}
+[data-fit-ratio] { position:relative }
+[data-fit-ratio="4:3"] { padding:75% 0 0 0 }
+[data-fit-ratio="16:9"] { padding:56.25% 0 0 0 }
+[data-fit-ratio] * { position:absolute; left:0; top:0; height:100%; margin:0; padding:0; border:0 }

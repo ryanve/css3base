@@ -21,7 +21,7 @@
 
     <style>
         /* The purpose of the `.custom` class is to override specificity from base sheets. */
-        body { max-width:1004px; width:98%; }
+        body { max-width:1004px; width:98%; margin:auto }
         a { text-decoration:none }
         form ul { list-style-type:none; padding-left:0 }
         form li { display:block; padding:1em; color:#133; background:#bee }
